@@ -13,14 +13,12 @@ The structure of this project is very simple. On Windows just copy the files to 
 **On Windows:**
 
 <code>\> copy gvimrc_base ..\\_gvimrc
-
 \> copy vimrc_base ..\\_vimrc
 </code>
 
 **On Mac and Unix:**
 
 <code>$ cp gvimrc_base ../.gvimrc
-
 $ cp vimrc_base ../.vimrc
 </code>
 
@@ -55,29 +53,29 @@ I added some syntax definitions to markdown to support github flavored markdown 
 
 Call them with *:call <functionname>*.
 
-- FormatXML()
-  Formats XML and sets the encoding to UTF-8
-- InitBackupDir()
-  Creates the folders backup and tmp in *$HOME/.vim* resp. *$HOME\vimfiles* if they don't exist.
-- RedSpace()
-  Highlights unneccessary spaces and tabs.
-- NoRedSpace()
-  Unhighlights unneccessary spaces and tabs.
-- InitSyntax()
-  Copies the css syntax files to the right place depending on your operating system on the first startup.
-- FileTime()
-  Outputs the Modified date of the current file
-- CurTime()
-  Outputs the current time
+- *FormatXML()*
+Formats XML and sets the encoding to UTF-8
+- *InitBackupDir()*
+Creates the folders backup and tmp in *$HOME/.vim* resp. *$HOME\vimfiles* if they don't exist.
+- *RedSpace()*
+Highlights unneccessary spaces and tabs.
+- *NoRedSpace()*
+Unhighlights unneccessary spaces and tabs.
+- *InitSyntax()*
+Copies the css syntax files to the right place depending on your operating system on the first startup.
+- *FileTime()*
+Outputs the Modified date of the current file
+- *CurTime()*
+Outputs the current time
 
 # Shortcuts
 	
-- Ctrl-w Ctrl-t
-  Enables the WindowManager
-- Ctrl-w Ctrl-f
-  Switches to the file chooser of the WindowManager
-- Ctrl-w Ctrl-b
-  Switches to the buffer explorer of the WindowManager
+- *Ctrl-w Ctrl-t*
+Enables the WindowManager
+- *Ctrl-w Ctrl-f*
+Switches to the file chooser of the WindowManager
+- *Ctrl-w Ctrl-b*
+Switches to the buffer explorer of the WindowManager
 
 # Other configurations made
 
