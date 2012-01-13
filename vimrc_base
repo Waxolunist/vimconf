@@ -1,0 +1,120 @@
+if has('win32') || has('win32unix') "windows/cygwin 
+	source $HOME/vimfiles/vimrc_win32
+else 
+	source $HOME/.vim/vimrc_unix
+endif 
+
+" If you want to get more Mac-like behavior, leave the "finish" line
+" commented out.  This may break menu translations.  For vim-standard menus,
+" uncomment this line so that the rest of the file will be ignored.
+" REQUIRED. This makes vim invoke latex-suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
+" can be called correctly.
+set shellslash
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse latex-suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+syntax on
+set ts=2
+set ai
+
+set ls=2
+set shiftwidth=2
+
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+set linebreak
+set nu
+
+function FormatXML()
+	" au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null" 
+	exe ":silent 1,$!xmllint --format --nowarning --recover - 2>/dev/null"
+	set encoding=UTF8
+endfunction
+
+function FormatHTML()
+	exe ":silent 1,$!tidy --input-xml true --indent yes 2>/dev/null"
+	set encoding=UTF8
+endfunction
+
+function InitBackupDir() 
+  if has('win32') || has('win32unix') "windows/cygwin 
+    let parent = $HOME .'/vimfiles/' 
+  else 
+    let parent = $HOME .'/.vim/' 
+  endif 
+
+  let backup = parent . 'backup/' 
+  let tmp = parent . 'tmp/' 
+
+  if exists("*mkdir") 
+    if !isdirectory(parent) 
+      call mkdir(parent) 
+    endif 
+    if !isdirectory(backup) 
+      call mkdir(backup) 
+    endif 
+    if !isdirectory(tmp) 
+      call mkdir(tmp) 
+    endif 
+  endif 
+
+  let missing_dir = 0 
+  if isdirectory(tmp) 
+    execute 'set backupdir=' . escape(backup, " ") . "/,." 
+  else 
+    let missing_dir = 1 
+  endif 
+  if isdirectory(backup) 
+    execute 'set directory=' . escape(tmp, " ") . "/,." 
+  else 
+    let missing_dir = 1 
+  endif 
+
+  if missing_dir 
+    echo "Warning: Unable to create backup directories: " . backup ." and " . tmp 
+    echo "Try: mkdir -p " . backup 
+    echo "and: mkdir -p " . tmp 
+    set backupdir=. 
+    set directory=. 
+  endif 
+
+endfunction 
+
+call InitBackupDir() 
+
+function RedSpace()
+	" Highlight redundant whitespaces
+	" This will highlight the whitespace characters at end of line
+	highlight WhitespaceEOL ctermbg=red guibg=red
+	match WhitespaceEOL /\s\+$/ 
+	" This will highlight spaces before a tab: 
+	highlight RedundantSpaces ctermbg=red guibg=red 
+	match RedundantSpaces /\s\+$\| \+\ze\t/ 
+endfunction
+
+function NoRedSpace()
+	" Highlight redundant whitespaces
+	" This will highlight the whitespace characters at end of line
+	highlight WhitespaceEOL ctermbg=bg guibg=bg
+	match WhitespaceEOL /\s\+$/ 
+	" This will highlight spaces before a tab: 
+	highlight RedundantSpaces ctermbg=bg guibg=bg 
+	match RedundantSpaces /\s\+$\| \+\ze\t/ 
+endfunction

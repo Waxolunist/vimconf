@@ -1,0 +1,36 @@
+if has("gui_win32")       " NT Windows
+	source $HOME/vimfiles/gvimrc_win32
+	source $HOME/vimfiles/syntax/win/css.vim
+elseif has("gui_mac")
+	source $HOME/.vim/gvimrc_mac
+	source $HOME/.vim/syntax/mac/css.vim
+else
+	source $HOME/.vim/gvimrc_unix
+	source $HOME/.vim/syntax/unix/css.vim
+endif
+
+let moria_style = 'dark'
+colors moria
+
+let g:persistentBehaviour=0
+map <c-w><c-t> :WMToggle<cr> 
+map <c-w><c-f> :FirstExplorerWindow<cr>
+map <c-w><c-b> :BottomExplorerWindow<cr>
+
+set statusline=%<%f%<%{FileTime()}%<%h%m%r%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
+set rulerformat=%15(%c%V\ %p%%%)
+
+fu! FileTime()
+        let ext=tolower(expand("%:e"))
+        let fname=tolower(expand('%<'))
+        let filename=fname . '.' . ext
+        let msg=""
+        let msg=msg." ".strftime("(Modified %b,%d %y %H:%M:%S)",getftime(filename))
+        return msg
+endf
+
+fu! CurTime()
+        let ftime=""
+        let ftime=ftime." ".strftime("%H:%M:%S")
+        return ftime
+endf 

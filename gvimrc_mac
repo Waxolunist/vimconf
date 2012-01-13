@@ -1,0 +1,17 @@
+set guifont=Monaco:h14
+set lines=39
+set columns=103
+
+function InitSyntax()
+	let parent = $HOME .'/.vim/' 
+	let syntaxdir = parent . 'syntax/' 
+	let syntaxfile = syntaxdir . 'css.vim'
+	let syntaxfileorig = syntaxdir . 'mac/css.vim'
+
+	if !filereadable(syntaxfile)
+  	call rename(syntaxfileorig, syntaxfile) 
+  endif
+	
+endfunction
+
+call InitSyntax()

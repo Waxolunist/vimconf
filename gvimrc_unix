@@ -1,0 +1,30 @@
+if has("gui_running")
+   if has("gui_gtk2")
+   	set guifont=FreeMono\ Bold\ 12
+   elseif has("x11")
+   	set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
+   else
+  	set guifont=Courier_New:h11:cDEFAULT
+	endif
+endif 
+
+set lines=39
+set columns=125
+
+set guioptions-=m
+set guioptions-=T
+
+
+function InitSyntax()
+	let parent = $HOME .'/.vim/' 
+	let syntaxdir = parent . 'syntax/' 
+	let syntaxfile = syntaxdir . 'css.vim'
+	let syntaxfileorig = syntaxdir . 'unix/css.vim'
+
+	if !filereadable(syntaxfile)
+  	call rename(syntaxfileorig, syntaxfile) 
+  endif
+	
+endfunction
+
+call InitSyntax()
