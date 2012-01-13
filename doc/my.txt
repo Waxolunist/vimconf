@@ -1,4 +1,21 @@
-# About
+*my.txt*  My personal helpfile.
+
+my                                       *my*
+Last Change: Jan 13, 2012
+
+|about|                  About
+|structure|              Structure and Installation
+|plugins|                Plugins
+|functions|              Functions
+|shortcuts|              Shortcuts
+|configuration|          Configuration
+|commands|               Useful commands
+|version|                Version
+
+For Vim version 7.0 or later.
+
+==============================================================================
+ABOUT                                             *about*
 
 This is my vim configuration of vim for windows, unix and mac. The unix-style does also work on macintosh (at least on Max OS X 10.3).
 
@@ -6,25 +23,29 @@ I am a lot working on different operating system. Thanks to Bram Moolenar, I hav
 
 My first customized vimrc is from a version something below 6.2. Since then it is evolving permanently and I am collecting some usefull scripts and plugins. Some are using external programs, maybe not available on all systems, but at least working on windows and debian, e.g. xmllint to format XML. I try to keep the plugins up to date, but because I just started this kind of organization of my vim configuration, it is maybe not always the latest version and some are surely damn old.
 
-# Structure and Installation
+===============================================================================
+STRUCTURE AND INSTALLATION											*structure*	
 
-The structure of this project is very simple. On Windows just copy the files to your home directory in the directory named *vimfiles*. On all other systems this directory is called *.vim*. Then copy the files *gvimrc_base* and *vimrc_base* to your home directory.
+The structure of this project is very simple. On Windows just copy the files to your home directory in the directory named *vimfiles* . On all other systems this directory is called *.vim* . Then copy the files *gvimrc_base* and *vimrc_base* to your home directory.
 
-**On Windows:**
+>
+    On Windows:
 
     > copy gvimrc_base ..\_gvimrc
     > copy vimrc_base ..\_vimrc
 
-**On Mac and Unix:**
+>
+		On Mac and Unix:
 
     $ cp gvimrc_base ../.gvimrc
     $ cp vimrc_base ../.vimrc
 
 Depending on which system you are, the files and plugins are sourced.
 
-If you are using the vim version with gui **gvim** the file *gvimrc_base* is loaded. The file *vimrc_base* will alway be loaded.
+If you are using the vim version with gui *gvim* the file *gvimrc_base* is loaded. The file *vimrc_base* will alway be loaded.
 
-# Plugins
+===============================================================================
+PLUGINS																				*plugins*	
 
 Following Plugins am I delivering:
 
@@ -41,13 +62,17 @@ Following Plugins am I delivering:
 - [moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
   A color scheme for GUI supposed to be highly readable
 
-## Changes made to the plugins
+Changes made to the plugins
 
 I added some syntax definitions to markdown to support github flavored markdown syntax.
 
-# Functions
+ 
+===============================================================================
+FUNCTIONS																				*functions*	
 
-Call them with *:call <functionname>*.
+Call them with
+>
+			:call functionname
 
 - *FormatXML()*
 Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
@@ -64,20 +89,17 @@ Outputs the Modified date of the current file
 - *CurTime()*
 Outputs the current time
 
-# Shortcuts
-	
-- *Ctrl-w Ctrl-t*
-Enables the WindowManager
-- *Ctrl-w Ctrl-f*
-Switches to the file chooser of the WindowManager
-- *Ctrl-w Ctrl-b*
-Switches to the buffer explorer of the WindowManager
+===============================================================================
+SHORTCUTS																				*shortcuts*	
 
-# Documentation
+<Ctrl-w> <Ctrl-t> Enables the WindowManager
 
-Often I forget some shortcuts. I write them all down in *doc/my.txt* and open this file with *:h my*.
+<Ctrl-w> <Ctrl-f> Switches to the file chooser of the WindowManager
 
-# Other configurations made
+<Ctrl-w> <Ctrl-b> Switches to the buffer explorer of the WindowManager
+
+===============================================================================
+CONFIGURATION																				*configuration*	
 
 - Set the color scheme by default to moria dark.
 - reformated the statusline
@@ -86,18 +108,39 @@ Often I forget some shortcuts. I write them all down in *doc/my.txt* and open th
 - start on windows by default in fullscreen mode
 - mapped the suffix .less to filetype css 
 - add mapping for arrow keys
-- disable the menu (*set guiOptions-=m*)
-- disable the toolbar (*set guiOptions-=T*)
-- enable by default syntax highlighting (*syntax on*)
-- enable indentation by default (*filetype indent on*)
-- enable linebreak by default (*set linebreak*)
-- enable line numbering by default (*set nu*)
-- enable auto indent by default (*set ai*)
-- enable the statusline always (*set ls=2*)
-- set shift width to 2 (*set shiftwidth=2*)
-- set tab size to 2 (*set ts=2*)
+- disable the menu >
+	set guiOptions-=m
+- disable the toolbar >
+	set guiOptions-=T
+- enable by default syntax highlighting >
+	syntax on
+- enable indentation by default >
+	filetype indent on
+- enable linebreak by default >
+	set linebreak
+- enable line numbering by default >
+	set nu
+- enable auto indent by default >
+	set ai
+- enable the statusline always >
+	set ls=2
+- set shift width to 2 >
+	set shiftwidth=2
+- set tab size to 2 >
+	set ts=2
 
-# Versions
+===============================================================================
+USEFUL COMMANDS  																		*commands*	
+
+Set the lineendings >
+	set ff? ffs?
+	set ff=unix
+	update
+
+
+
+===============================================================================
+VERSION																				*version*	
 
 Currently I am using version 7.3 of vim.
 All plugins were updated on 01/13/2012.
