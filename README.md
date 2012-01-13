@@ -10,25 +10,21 @@ My first customized vimrc is from a version something below 6.2. Since then it i
 
 The structure of this project is very simple. On Windows just copy the files to your home directory in the directory named *vimfiles*. On all other systems this directory is called *.vim*. Then copy the files *gvimrc_base* and *vimrc_base* to your home directory.
 
-** On Windows: **
+**On Windows:**
 
-``
-
+<code>
 > copy gvimrc_base ..\_gvimrc
 
 > copy vimrc_base ..\_vimrc
+</code>
 
-``
+**On Mac and Unix:**
 
-** On Mac and Unix: **
-
-``
-
+<code>
 $ cp gvimrc_base ../.gvimrc
 
 $ cp vimrc_base ../.vimrc
-
-`` 
+</code>
 
 Depending on which system you are, the files and plugins are sourced.
 
