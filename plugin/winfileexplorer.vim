@@ -1,7 +1,7 @@
 "=============================================================================
 " File: explorer.vim
 " Author: M A Aziz Ahmed (aziz@acorn-networks.com)
-" Last Change: Sun Mar 31 11:00 PM 2002 PST
+" Last Change: 2007-05-22 16:52:26
 " Version: 2.5
 " Additions by Mark Waggoner (waggoner@aracnet.com) et al.
 "-----------------------------------------------------------------------------
@@ -25,7 +25,7 @@
 "
 "-----------------------------------------------------------------------------
 " Update history removed, it's not very interesting.
-" Contributors were: Doug Potts, Bram Moolenaar, Thomas Köhler
+" Contributors were: Doug Potts, Bram Moolenaar, Thomas KÃ¶hler
 "
 " This is a modified version to be compatible with winmanager.vim. 
 " Changes by Srinath Avadhanula
@@ -122,6 +122,11 @@ endif
 " plugin
 if !exists("g:defaultExplorer")
 	let g:defaultExplorer = 1
+end
+
+" whether or not to show hidden files in the file-explorer plugin.
+if !exists("g:explShowHiddenFiles")
+	let g:explShowHiddenFiles = 0
 end
 
 if !exists('g:favDirs')
@@ -388,7 +393,7 @@ function! s:EditDir(...)
 		syn match browseSortBy      "^\" Sorted by .*$"  contains=browseSuffixInfo
 		syn match browseSuffixInfo  "(.*)$"  contained
 		syn match browseFilter      "^\" Not Showing:.*$"
-		syn match browseFiletime    "«\d\+$"
+		syn match browseFiletime    "Â«\d\+$"
 		exec('syn match browseSuffixes    "' . b:suffixesHighlight . '"')
 
 		"hi def link browseSynopsis    PreProc
@@ -436,6 +441,8 @@ function! s:EditDir(...)
 	nnoremap <buffer> a   :call <SID>ShowAllFiles()<cr>:call <SID>RestoreFileDisplay()<cr>
 	nnoremap <buffer> R   :call <SID>RenameFile()<cr>
 	nnoremap <buffer> c   :exec "cd ".b:completePathEsc<cr>:pwd<cr>
+	nnoremap <buffer> S   :call <SID>ShellExecute()<cr>
+	nnoremap <buffer> x   :call <SID>ToggleShowHiddenFiles()<cr>
 	let &cpo = cpo_save
 
 	" If directory is already loaded, don't open it again!
@@ -649,6 +656,37 @@ function s:DoubleClick()
 	endif
 endfun
 
+
+"---
+" Open file or directory with the corresponding application
+" associated by the shell
+"
+function! s:ShellExecute()
+  " Are we on a line with a file name?
+  let l = getline(".")
+  if l =~ '^"'
+    return
+  endif
+
+  " Copy window settings to script settings
+  let s:sortby=w:sortdirlabel . w:sorttype
+  let s:longhelp = w:longhelp
+  let s:longlist = w:longlist
+
+  " Get the file name
+  let fn=s:GetFullFileName()
+
+  if (has("win32"))
+    exec "silent ! start \"\" \"".substitute(fn, "/", "\\", "g")."\""
+  else
+	if (exists("g:netrw_browsex_viewer"))
+		exec "silent !" . g:netrw_browsex_viewer . " \'".fn."\'"
+	else
+		exec "silent !start \'".fn."\'"
+	endif
+  endif
+endfunction
+
 "---
 " Open file or directory in the same window as the explorer is
 " currently in
@@ -745,10 +783,17 @@ function! s:ShowDirectory()
 		let files = files . "\n"
 	endif
 
-	" Add the dot files now, making sure "." is not included!
-	let files = files . substitute(s:Path(glob(b:completePath.".*")), "[^\n]*/./\\=\n", '' , '')
-	if files != "" && files !~ '\n$'
-		let files = files . "\n"
+	if g:explShowHiddenFiles
+		" Add the dot files now, making sure "." and ".." are not included!
+		let files = files . substitute(s:Path(glob(b:completePath.".*"))."\n", "[^\n]*/..\\=/\\=\n", '' , 'g')
+		if files != "" && files !~ '\n$'
+			let files = files . "\n"
+		endif
+	endif
+
+	" Append ".." is not at the root directory.
+	if b:completePath != "/"
+		let files = files . "..\n"
 	endif
 
 	" Are there any files left after filtering?
@@ -897,7 +942,7 @@ function! s:ExtractFileDate(line)
 	if w:longlist==0
 		return getftime(s:ExtractFileName(a:line))
 	else
-		return strpart(matchstr(strpart(a:line,b:maxFileLen+b:maxFileSizeLen+4),"«.*"),1) + 0
+		return strpart(matchstr(strpart(a:line,b:maxFileLen+b:maxFileSizeLen+4),"Â«.*"),1) + 0
 	endif
 endfunction
 
@@ -910,10 +955,12 @@ function! s:AddHeader()
 	1
 	if w:longhelp==1
 		let @f="\" <enter> : open file or directory\n"
+			\."\" S : open the file/folder with external program\n"
 			\."\" o : open new window for file/directory\n"
 			\."\" O : open file in previously visited window\n"
 			\."\" p : preview the file\n"
 			\."\" i : toggle size/date listing\n"
+			\."\" x : toggle show hidden files/directories\n"
 			\."\" s : select sort field    r : reverse sort\n"
 			\."\" - : go up one level      c : cd to this dir\n"
 			\."\" R : rename file          D : delete file\n"
@@ -1011,7 +1058,7 @@ endfunction
 function! s:FileModDate(name)
 	let filetime=getftime(a:name)
 	if filetime > 0
-		return strftime(g:explDateFormat,filetime) . " «" . filetime
+		return strftime(g:explDateFormat,filetime) . " Â«" . filetime
 	else
 		return ""
 	endif
@@ -1480,6 +1527,12 @@ end
 function! <SID>CleanUpHistory()
   call histdel("/", -1)
   let @/ = histget("/", -1)
+endfunction
+
+function! <SID>ToggleShowHiddenFiles()
+  let g:explShowHiddenFiles = !g:explShowHiddenFiles
+  call <SID>EditDir(b:completePath,1)
+  call <SID>RestoreFileDisplay()
 endfunction
 
 " restore 'cpo'
