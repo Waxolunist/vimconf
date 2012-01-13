@@ -13,17 +13,21 @@ The structure of this project is very simple. On Windows just copy the files to 
 ** On Windows: **
 
 ``
+
 > copy gvimrc_base ..\_gvimrc
 
 > copy vimrc_base ..\_vimrc
-`` 
+
+``
 
 ** On Mac and Unix: **
 
 ``
-> cp gvimrc_base ..\.gvimrc
 
-> cp vimrc_base ..\.vimrc
+$ cp gvimrc_base ../.gvimrc
+
+$ cp vimrc_base ../.vimrc
+
 `` 
 
 Depending on which system you are, the files and plugins are sourced.
