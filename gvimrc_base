@@ -1,12 +1,9 @@
 if has("gui_win32")       " NT Windows
 	source $HOME/vimfiles/gvimrc_win32
-	source $HOME/vimfiles/syntax/win/css.vim
 elseif has("gui_mac")
 	source $HOME/.vim/gvimrc_mac
-	source $HOME/.vim/syntax/mac/css.vim
 else
 	source $HOME/.vim/gvimrc_unix
-	source $HOME/.vim/syntax/unix/css.vim
 endif
 
 let moria_style = 'dark'

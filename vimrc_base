@@ -48,11 +48,6 @@ function FormatXML()
 	set encoding=UTF8
 endfunction
 
-function FormatHTML()
-	exe ":silent 1,$!tidy --input-xml true --indent yes 2>/dev/null"
-	set encoding=UTF8
-endfunction
-
 function InitBackupDir() 
   if has('win32') || has('win32unix') "windows/cygwin 
     let parent = $HOME .'/vimfiles/' 

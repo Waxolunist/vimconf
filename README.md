@@ -12,19 +12,17 @@ The structure of this project is very simple. On Windows just copy the files to 
 
 **On Windows:**
 
-<code>
-> copy gvimrc_base ..\_gvimrc
-
-> copy vimrc_base ..\_vimrc
+<code>\> copy gvimrc_base ..\\_gvimrc
+\> copy vimrc_base ..\\_vimrc
 </code>
 
 **On Mac and Unix:**
 
-<code>
-$ cp gvimrc_base ../.gvimrc
-
+<code>$ cp gvimrc_base ../.gvimrc
 $ cp vimrc_base ../.vimrc
 </code>
+
+
 
 Depending on which system you are, the files and plugins are sourced.
 
@@ -34,4 +32,67 @@ If you are using the vim version with gui **gvim** the file gvimrc_base is loade
 
 Following Plugins am I delivering:
 
+- ![Markdown 1.2.2](http://www.vim.org/scripts/script.php?script_id=2882)
+		Syntax highlight for Markdown text files
+- ![snipMate 0.8.3](http://www.vim.org/scripts/script.php?script_id=2540)
+		TextMate-style snippets support
+- ![bufexplorer 7.2.8](http://www.vim.org/scripts/script.php?script_id=42)
+		Buffer Explorer / Browser - Switch between buffers easily
+- ![winmanger 2.35](http://www.vim.org/scripts/script.php?script_id=1440)
+		Windows style IDE for VIM
+- ![Better CSS Syntax for Vim 20110302](http://www.vim.org/scripts/script.php?script_id=3220)
+		CSS syntax highlighting with support for CSS3
+- ![moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
+		A color scheme for GUI supposed to be highly readable
 
+## Changes made to the plugins
+
+I added some syntax definitions to markdown to support github flavored markdown syntax.
+
+# Functions
+
+Call them with *:call <functionname>*.
+
+- FormatXML()
+	Formats XML and sets the encoding to UTF-8
+- InitBackupDir()
+	Creates the folders backup and tmp in *$HOME/.vim* resp. *$HOME\vimfiles* if they don't exist.
+- RedSpace()
+	Highlights unneccessary spaces and tabs.
+- NoRedSpace()
+	Unhighlights unneccessary spaces and tabs.
+- InitSyntax()
+	Copies the css syntax files to the right place depending on your operating system on the first startup.
+- FileTime()
+	Outputs the Modified date of the current file
+- CurTime()
+	Outputs the current time
+
+# Shortcuts
+	
+- Ctrl-w Ctrl-t
+	Enables the WindowManager
+- Ctrl-w Ctrl-f
+	Switches to the file chooser of the WindowManager
+- Ctrl-w Ctrl-b
+	Switches to the buffer explorer of the WindowManager
+
+# Other configurations made
+
+- Set the color scheme by default to moria dark.
+- reformated the statusline
+- reformated the ruler
+- set the columns, lines and guifont depending on the operating system
+- start on windows by default in fullscreen mode
+- mapped the suffix .less to filetype css 
+- add mapping for arrow keys
+- disable the menu (*set guiOptions-=m*)
+- disable the toolbar (*set guiOptions-=T*)
+- enable by default syntax highlighting (*syntax on*)
+- enable indentation by default (*filetype indent on*)
+- enable linebreak by default (*set linebreak*)
+- enable line numbering by default (*set nu*)
+- enable auto indent by default (*set ai*)
+- enable the statusline always (*set ls=2*)
+- set shift width to 2 (*set shiftwidth=2*)
+- set tab size to 2 (*set ts=2*)
