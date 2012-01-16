@@ -74,7 +74,7 @@ Call them with
 >
 			:call functionname
 
-- *FormatXML()*
+- FormatXML() or :FormatXML
 Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
 - *InitBackupDir()*
 Creates the folders backup and tmp in *$HOME/.vim* resp. *$HOME\vimfiles* if they don't exist.
@@ -141,6 +141,14 @@ Set the lineendings >
 Create the helptags >
 	helptags ~/.vim/doc/
 	helptags ~/vimfiles/doc/
+
+Change the directory in winmanager >
+	cd D:
+	C
+
+Open File in Winmanager >
+	<Enter> in already opened Editwindow
+	<Tab> in split Editwindow
 
 ===============================================================================
 VERSION																				*my-version* *personal-version*

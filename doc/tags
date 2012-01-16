@@ -8,7 +8,6 @@ ExtractSnips()	snipMate.txt	/*ExtractSnips()*
 ExtractSnipsFile()	snipMate.txt	/*ExtractSnipsFile()*
 FileTime()	my.txt	/*FileTime()*
 Filename()	snipMate.txt	/*Filename()*
-FormatXML()	my.txt	/*FormatXML()*
 InitBackupDir()	my.txt	/*InitBackupDir()*
 InitSyntax()	my.txt	/*InitSyntax()*
 NoRedSpace()	my.txt	/*NoRedSpace()*
