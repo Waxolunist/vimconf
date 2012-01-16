@@ -63,9 +63,6 @@ Following Plugins am I delivering:
   A color scheme for GUI supposed to be highly readable
 - [haml 1.0](http://www.vim.org/scripts/script.php?script_id=1433)
   Haml and Sass syntax, indenting, and ftplugino 
-- [fecompressor 0.0.1](http://www.vim.org/scripts/script.php?script_id=3453)
-  Auto execute yuicompressor, lessc, sass..etc 
-
 
 Changes made to the plugins
 
@@ -93,6 +90,8 @@ Copies the css syntax files to the right place depending on your operating syste
 Outputs the Modified date of the current file
 - *CurTime()*
 Outputs the current time
+- CompileSASS() or :CompileSASS or :SASS
+Compiles scss to css in the same folder
 
 ===============================================================================
 SHORTCUTS																				*my-shortcuts* *personal-shortcuts*

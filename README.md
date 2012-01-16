@@ -12,13 +12,13 @@ The structure of this project is very simple. On Windows just copy the files to 
 
 **On Windows:**
 
-    > copy gvimrc_base ..\_gvimrc
-    > copy vimrc_base ..\_vimrc
+    > copy gvimrc ..\_gvimrc
+    > copy vimrc ..\_vimrc
 
 **On Mac and Unix:**
 
-    $ cp gvimrc_base ../.gvimrc
-    $ cp vimrc_base ../.vimrc
+    $ cp gvimrc ../.gvimrc
+    $ cp vimrc ../.vimrc
 
 Depending on which system you are, the files and plugins are sourced.
 
@@ -42,8 +42,6 @@ Following Plugins am I delivering:
   A color scheme for GUI supposed to be highly readable
 - [haml 1.0](http://www.vim.org/scripts/script.php?script_id=1433)
   Haml and Sass syntax, indenting, and ftplugino 
-- [fecompressor 0.0.1](http://www.vim.org/scripts/script.php?script_id=3453)
-  Auto execute yuicompressor, lessc, sass..etc 
 
 ## Changes made to the plugins
 
@@ -51,9 +49,9 @@ I added some syntax definitions to markdown to support github flavored markdown 
 
 # Functions
 
-Call them with *:call <functionname>*.
+Call them with *:call <functionname>* or the commands.
 
-- *FormatXML()*
+- *FormatXML()* or *:FormatXML*
 Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
 - *InitBackupDir()*
 Creates the folders backup and tmp in *$HOME/.vim* resp. *$HOME\vimfiles* if they don't exist.
@@ -67,6 +65,8 @@ Copies the css syntax files to the right place depending on your operating syste
 Outputs the Modified date of the current file
 - *CurTime()*
 Outputs the current time
+- *CompileSASS()* or *:CompileSASS* or *:SASS*
+Compiles scss to css in the same folder
 
 # Shortcuts
 	
