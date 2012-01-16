@@ -40,6 +40,10 @@ Following Plugins am I delivering:
   CSS syntax highlighting with support for CSS3
 - [moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
   A color scheme for GUI supposed to be highly readable
+- [haml 1.0](http://www.vim.org/scripts/script.php?script_id=1433)
+  Haml and Sass syntax, indenting, and ftplugino 
+- [fecompressor 0.0.1](http://www.vim.org/scripts/script.php?script_id=3453)
+  Auto execute yuicompressor, lessc, sass..etc 
 
 ## Changes made to the plugins
 
