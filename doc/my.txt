@@ -108,6 +108,7 @@ CONFIGURATION																				*my-configuration* *personal-configuration*
 - start on windows by default in fullscreen mode
 - mapped the suffix .less to filetype css 
 - add mapping for arrow keys
+- automaticatilly write helptags after editing files in the doc folder
 - disable the menu >
 	set guiOptions-=m
 - disable the toolbar >

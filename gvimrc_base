@@ -31,3 +31,4 @@ fu! CurTime()
         let ftime=ftime." ".strftime("%H:%M:%S")
         return ftime
 endf 
+

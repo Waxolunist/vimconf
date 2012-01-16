@@ -47,6 +47,7 @@ function FormatXML()
 	exe ":silent 1,$!xmllint --format --nowarning --recover - 2>/dev/null"
 	set encoding=UTF8
 endfunction
+command -nargs=0 formatxml :call FormatXML()
 
 function InitBackupDir() 
   if has('win32') || has('win32unix') "windows/cygwin 

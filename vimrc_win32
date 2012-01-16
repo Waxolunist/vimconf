@@ -5,3 +5,5 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 set encoding=latin1
+
+autocmd BufWritePost ~/vimfiles/doc/* :helptags ~/vimfiles/doc
