@@ -62,7 +62,9 @@ Following Plugins am I delivering:
 - [moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
   A color scheme for GUI supposed to be highly readable
 - [haml 1.0](http://www.vim.org/scripts/script.php?script_id=1433)
-  Haml and Sass syntax, indenting, and ftplugino 
+  Haml and Sass syntax, indenting, and ftplugin
+- [ccf 0.1]
+  This plugin by me formats, converts and compiles with external programs
 
 Changes made to the plugins
 
@@ -76,8 +78,6 @@ Call them with
 >
 			:call functionname
 
-- FormatXML() or :FormatXML
-Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
 - *InitBackupDir()*
 Creates the folders backup and tmp in *$HOME/.vim* resp. *$HOME\vimfiles* if they don't exist.
 - *RedSpace()*
@@ -92,6 +92,15 @@ Outputs the Modified date of the current file
 Outputs the current time
 - CompileSASS() or :CompileSASS or :SASS
 Compiles scss to css in the same folder
+
+From ccf.vim:
+
+- *CompileSASS()* or *:SASS*
+Compiles scss to css in the same folder. This function depends on the ruby gem [sass](http://sass-lang.com/).
+- *CompileLESS()* or *:LESS*
+Compiles less to css in the same folder. This function depends on  [lessc](https://github.com/duncansmart/less.js-windows).
+- *FormatXML()* or *:FormatXML*
+Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
 
 ===============================================================================
 SHORTCUTS																				*my-shortcuts* *personal-shortcuts*
@@ -153,6 +162,13 @@ Change the directory in winmanager >
 Open File in Winmanager >
 	<Enter> in already opened Editwindow
 	<Tab> in split Editwindow
+
+Switch buffer >
+	:bu <buffernumber>
+
+Set Windows height >
+	:res -N
+	:res +N
 
 ===============================================================================
 VERSION																				*my-version* *personal-version*

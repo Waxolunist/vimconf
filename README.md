@@ -41,7 +41,9 @@ Following Plugins am I delivering:
 - [moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
   A color scheme for GUI supposed to be highly readable
 - [haml 1.0](http://www.vim.org/scripts/script.php?script_id=1433)
-  Haml and Sass syntax, indenting, and ftplugino 
+  Haml and Sass syntax, indenting, and ftplugin
+- [ccf 0.1]
+  This plugin by me formats, converts and compiles with external programs
 
 ## Changes made to the plugins
 
@@ -51,8 +53,6 @@ I added some syntax definitions to markdown to support github flavored markdown 
 
 Call them with *:call <functionname>* or the commands.
 
-- *FormatXML()* or *:FormatXML*
-Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
 - *InitBackupDir()*
 Creates the folders backup and tmp in *$HOME/.vim* resp. *$HOME\vimfiles* if they don't exist.
 - *RedSpace()*
@@ -65,8 +65,15 @@ Copies the css syntax files to the right place depending on your operating syste
 Outputs the Modified date of the current file
 - *CurTime()*
 Outputs the current time
-- *CompileSASS()* or *:CompileSASS* or *:SASS*
-Compiles scss to css in the same folder
+
+## From ccf.vim:
+
+- *CompileSASS()* or *:SASS*
+Compiles scss to css in the same folder. This function depends on the ruby gem [sass](http://sass-lang.com/).
+- *CompileLESS()* or *:LESS*
+Compiles less to css in the same folder. This function depends on  [lessc](https://github.com/duncansmart/less.js-windows).
+- *FormatXML()* or *:FormatXML*
+Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
 
 # Shortcuts
 	

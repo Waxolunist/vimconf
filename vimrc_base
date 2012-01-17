@@ -42,29 +42,6 @@ inoremap <Up> <C-o>gk
 set linebreak
 set nu
 
-function FormatXML()
-	" au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null" 
-	if executable('xmllint')
-		exe ":silent 1,$!xmllint --format --nowarning --recover - 2>/dev/null"
-		set encoding=UTF8
-	endif
-endfunction
-command -nargs=0 FormatXML :call FormatXML()
-
-function CompileSASS()
-	let cwd = expand('%:p:h')
-	let nam = expand('%:t:r')
-	let ext = expand('%:e')
-	let cssnam = nam.'.css'
-	if ext == 'scss'
-		if executable('sass')
-			exe ":silent !sass % > ".cwd."/".cssnam." &"
-			"call system('sass '.cwd.'/'.nam.'.'.ext.' '.cwd.'/'.cssnam.' &')
-		endif
-	endif
-endfunction
-command -nargs=0 SASS :call CompileSASS()
-
 function InitBackupDir() 
   if has('win32') || has('win32unix') "windows/cygwin 
     let parent = $HOME .'/vimfiles/' 

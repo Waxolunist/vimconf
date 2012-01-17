@@ -9,6 +9,7 @@ endif
 let moria_style = 'dark'
 colors moria
 
+let g:defaultExplorer=0
 let g:persistentBehaviour=0
 map <c-w><c-t> :WMToggle<cr> 
 map <c-w><c-f> :FirstExplorerWindow<cr>
