@@ -107,6 +107,7 @@ Often I forget some shortcuts. I write them all down in *doc/my.txt* and open th
 - enable the statusline always (*set ls=2*)
 - set shift width to 2 (*set shiftwidth=2*)
 - set tab size to 2 (*set ts=2*)
+- set foldmethod to syntax (*set foldmethod=syntax*)
 
 # Versions
 

@@ -142,6 +142,8 @@ CONFIGURATION																				*my-configuration* *personal-configuration*
 	set shiftwidth=2
 - set tab size to 2 >
 	set ts=2
+- set foldmethod to syntax >
+	set foldmethod=syntax
 
 ===============================================================================
 USEFUL COMMANDS  																		*my-commands*	*personal-commands*
@@ -166,9 +168,20 @@ Open File in Winmanager >
 Switch buffer >
 	:bu <buffernumber>
 
-Set Windows height >
-	:res -N
-	:res +N
+Resize Windows >
+	:res -N / +N
+	:vert res -N / +N
+
+Toggle Folding >
+	za
+
+Open all Folds >
+	zR
+
+Close All Folds >
+	zM
+
+More about Folding see: http://nerd-hacking.blogspot.com/2006/05/vim-folding-tips.html
 
 ===============================================================================
 VERSION																				*my-version* *personal-version*
