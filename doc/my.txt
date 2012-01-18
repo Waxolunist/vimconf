@@ -103,6 +103,10 @@ Compiles scss to css in the same folder. This function depends on the ruby gem [
 Compiles less to css in the same folder. This function depends on  [lessc](https://github.com/duncansmart/less.js-windows).
 - *FormatXML()* or *:FormatXML*
 Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
+- *SetJavaClasspath()*
+To get better code completion you have to set your java classpath. If you got an maven project open your pom.xml and run this function.
+If you want to reset the java classpath call it with the argument 1 *:call SetJavaClasspath(1)*. This function sets your classpath
+depending on your pom.xml. It creates a classpath file .occp (OmniCompletionClassPath) for faster running the next time.
 
 ===============================================================================
 SHORTCUTS																				*my-shortcuts* *personal-shortcuts*
@@ -152,43 +156,62 @@ CONFIGURATION																				*my-configuration* *personal-configuration*
 ===============================================================================
 USEFUL COMMANDS  																		*my-commands*	*personal-commands*
 
-Set the lineendings >
-	set ff? ffs?
-	set ff=unix
-	update
+Editing:
 
-Create the helptags >
-	helptags ~/.vim/doc/
-	helptags ~/vimfiles/doc/
+	Set the lineendings >
+		set ff? ffs?
+		set ff=unix
+		update
 
-Change the directory in winmanager >
-	cd D:
-	C
+	Toggle Uppercase to Lowercase and vice-versa >
+		~
 
-Open File in Winmanager >
-	<Enter> in already opened Editwindow
-	<Tab> in split Editwindow
 
-Switch buffer >
-	:bu <buffernumber>
+Help system:
 
-Resize Windows >
-	:res -N / +N
-	:vert res -N / +N
+	Create the helptags >
+		helptags ~/.vim/doc/
+		helptags ~/vimfiles/doc/
 
-Toggle Folding >
-	za
 
-Open all Folds >
-	zR
+Fileexplorer:
+	
+	Change the directory in winmanager >
+		cd D:
+		C
 
-Close All Folds >
-	zM
+	Open File in Winmanager >
+		<Enter> in already opened Editwindow
+		<Tab> in split Editwindow
 
-More about Folding see: http://nerd-hacking.blogspot.com/2006/05/vim-folding-tips.html
+	Switch buffer >
+		:bu <buffernumber>
 
-Toggle Uppercase to Lowercase and vice-versa >
-	~
+	Toggle show hidden files >
+		x (in Explorer window)
+
+
+Windows Management:
+
+	Resize Windows >
+		:res -N / +N
+		:vert res -N / +N
+
+
+Coding:
+	Toggle Folding >
+		za
+
+	Open all Folds >
+		zR
+
+	Close All Folds >
+		zM
+
+	More about Folding see: http://nerd-hacking.blogspot.com/2006/05/vim-folding-tips.html
+
+	Code Completion >
+		<Ctrl-Space>
 
 ===============================================================================
 VERSION																				*my-version* *personal-version*

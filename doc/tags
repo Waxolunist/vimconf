@@ -19,6 +19,7 @@ InitSyntax()	my.txt	/*InitSyntax()*
 NoRedSpace()	my.txt	/*NoRedSpace()*
 RedSpace()	my.txt	/*RedSpace()*
 ResetSnippets()	snipMate.txt	/*ResetSnippets()*
+SetJavaClasspath()	my.txt	/*SetJavaClasspath()*
 WinManagerFileEdit	winmanager.txt	/*WinManagerFileEdit*
 WinManagerForceReSize	winmanager.txt	/*WinManagerForceReSize*
 WinManagerResumeAUs	winmanager.txt	/*WinManagerResumeAUs*
