@@ -87,4 +87,4 @@ function! SetJavaClasspath(...)
 		"endif
 	endif
 endfunction
-map <F8> :call SetJavaClasspath()
+map <F8> :call SetJavaClasspath()<CR>
