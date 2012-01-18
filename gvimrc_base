@@ -15,6 +15,14 @@ map <c-w><c-t> :WMToggle<cr>
 map <c-w><c-f> :FirstExplorerWindow<cr>
 map <c-w><c-b> :BottomExplorerWindow<cr>
 
+if has("autocmd")
+	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
+endif
+inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
+inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
+inoremap <c-space> <c-x><c-o>
+
 set statusline=%<%f%<%{FileTime()}%<%h%m%r%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
 set rulerformat=%15(%c%V\ %p%%%)
 

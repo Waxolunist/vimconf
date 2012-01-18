@@ -44,6 +44,8 @@ Following Plugins am I delivering:
   Haml and Sass syntax, indenting, and ftplugin
 - [ccf 0.1]
   This plugin by me formats, converts and compiles with external programs
+- [javacomplete 0.77.1.2](http://www.vim.org/scripts/script.php?script_id=1785)
+  Omni Completion for JAVA 
 
 ## Changes made to the plugins
 
@@ -83,6 +85,8 @@ Enables the WindowManager
 Switches to the file chooser of the WindowManager
 - *Ctrl-w Ctrl-b*
 Switches to the buffer explorer of the WindowManager
+- *Ctrl-Space*
+Completion in java code (Hold the ctrl-key down to choose from completion)
 
 # Documentation
 
