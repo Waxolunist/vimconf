@@ -77,9 +77,10 @@ Compiles less to css in the same folder. This function depends on  [lessc](https
 - *FormatXML()* or *:FormatXML*
 Formats XML and sets the encoding to UTF-8. This function depends on [xmllint](http://xmlsoft.org/xmllint.html).
 - *SetJavaClasspath()*
-To get better code completion you have to set your java classpath. If you got an maven project open your pom.xml and run this function.
+To get better code completion you have to set your java classpath. If you got an maven project, this script searches upwards for your pom.xml.
 If you want to reset the java classpath call it with the argument 1 *:call SetJavaClasspath(1)*. This function sets your classpath
-depending on your pom.xml. It creates a classpath file .occp (OmniCompletionClassPath) for faster running the next time.
+depending on your pom.xml. It creates a classpath file .occp (OmniCompletionClassPath) for faster running the next time next to your pom.xml.
+To rerun this function on next start of vim, just hit <F8>.
 
 # Shortcuts
 	
@@ -91,6 +92,8 @@ Switches to the file chooser of the WindowManager
 Switches to the buffer explorer of the WindowManager
 - *Ctrl-Space*
 Completion in java code (Hold the ctrl-key down to choose from completion)
+- *<F8>*
+Reset the classpath from your .occp file next to your pom.xml or generate the .occp.
 
 # Documentation
 
