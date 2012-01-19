@@ -15,16 +15,3 @@ set guioptions-=m
 set guioptions-=T
 
 
-function InitSyntax()
-	let parent = $HOME .'/.vim/' 
-	let syntaxdir = parent . 'syntax/' 
-	let syntaxfile = syntaxdir . 'css.vim'
-	let syntaxfileorig = syntaxdir . 'unix/css.vim'
-
-	if !filereadable(syntaxfile)
-  	call rename(syntaxfileorig, syntaxfile) 
-  endif
-	
-endfunction
-
-call InitSyntax()

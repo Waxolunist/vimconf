@@ -1,50 +1,5 @@
-if has('win32') || has('win32unix') "windows/cygwin 
-	source $HOME/vimfiles/vimrc_win32
-else 
-	source $HOME/.vim/vimrc_unix
-endif 
-
-" If you want to get more Mac-like behavior, leave the "finish" line
-" commented out.  This may break menu translations.  For vim-standard menus,
-" uncomment this line so that the rest of the file will be ignored.
-" REQUIRED. This makes vim invoke latex-suite when you open a tex file.
-filetype plugin on
-
-" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" can be called correctly.
-set shellslash
-
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse latex-suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
-syntax on
-set ts=2
-set ai
-
-set foldmethod=syntax
-
-set ls=2
-set shiftwidth=2
-
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
-
-set linebreak
-set nu
-
-function InitBackupDir() 
+" Functions
+function! InitBackupDir() 
   if has('win32') || has('win32unix') "windows/cygwin 
     let parent = $HOME .'/vimfiles/' 
   else 
@@ -88,9 +43,7 @@ function InitBackupDir()
 
 endfunction 
 
-call InitBackupDir() 
-
-function RedSpace()
+function! RedSpace()
 	" Highlight redundant whitespaces
 	" This will highlight the whitespace characters at end of line
 	highlight WhitespaceEOL ctermbg=red guibg=red
@@ -100,7 +53,7 @@ function RedSpace()
 	match RedundantSpaces /\s\+$\| \+\ze\t/ 
 endfunction
 
-function NoRedSpace()
+function! NoRedSpace()
 	" Highlight redundant whitespaces
 	" This will highlight the whitespace characters at end of line
 	highlight WhitespaceEOL ctermbg=bg guibg=bg
@@ -109,3 +62,84 @@ function NoRedSpace()
 	highlight RedundantSpaces ctermbg=bg guibg=bg 
 	match RedundantSpaces /\s\+$\| \+\ze\t/ 
 endfunction
+
+fu! FileTime()
+        let ext=tolower(expand("%:e"))
+        let fname=tolower(expand('%<'))
+        let filename=fname . '.' . ext
+        let msg=""
+        let msg=msg." ".strftime("(Modified %b,%d %y %H:%M:%S)",getftime(filename))
+        return msg
+endf
+
+fu! CurTime()
+        let ftime=""
+        let ftime=ftime." ".strftime("%H:%M:%S")
+        return ftime
+endf 
+
+
+" Configuration
+if has('win32') || has('win32unix') "windows/cygwin 
+	source $HOME/vimfiles/vimrc_win32
+else 
+	source $HOME/.vim/vimrc_unix
+endif 
+
+" If you want to get more Mac-like behavior, leave the "finish" line
+" commented out.  This may break menu translations.  For vim-standard menus,
+" uncomment this line so that the rest of the file will be ignored.
+" REQUIRED. This makes vim invoke latex-suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
+" can be called correctly.
+set shellslash
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse latex-suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+syntax on
+set ts=2
+set expandtab
+set ai
+
+set foldmethod=syntax
+
+set ls=2
+set shiftwidth=2
+
+set linebreak
+set nu
+
+let moria_style = 'dark'
+colors moria
+
+let g:defaultExplorer=0
+let g:persistentBehaviour=0
+map <c-w><c-t> :WMToggle<cr> 
+map <c-w><c-f> :FirstExplorerWindow<cr>
+map <c-w><c-b> :BottomExplorerWindow<cr>
+
+vnoremap <Right> l
+vnoremap <Left> h
+vnoremap <Up> k
+vnoremap <Down> j
+
+if has("autocmd")
+	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
+endif
+inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
+inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
+inoremap <c-space> <c-x><c-o>
+
+set statusline=%<%f%<%{FileTime()}%<%h%m%r%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
+set rulerformat=%15(%c%V\ %p%%%)
+
+call InitBackupDir()
+

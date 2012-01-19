@@ -8,16 +8,4 @@ set columns=123
 set guioptions-=m
 set guioptions-=T
 
-function InitSyntax()
-	let parent = $HOME .'/vimfiles/' 
-	let syntaxdir = parent . 'syntax/' 
-	let syntaxfile = syntaxdir . 'css.vim'
-	let syntaxfileorig = syntaxdir . 'win/css.vim'
 
-	if !filereadable(syntaxfile)
-  	call rename(syntaxfileorig, syntaxfile) 
-  endif
-	
-endfunction
-
-call InitSyntax()

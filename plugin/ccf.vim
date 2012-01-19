@@ -52,29 +52,28 @@ command! -nargs=0 LESS :call CompileLESS()
 " New: You don't need to open your pom, it searches recursively upwards for it
 function! SetJavaClasspath(...)
 	let overwrite = a:0
-	"let pom = cwd.'/pom.xml'
-	let pom = fnamemodify(findfile('pom.xml','.;'),":p")
-	"let cwd = expand('%:p:h')
-	let cwd = fnamemodify(pom,":h")
-	let occp = cwd.'/.occp'
-	"echomsg cwd
-	"echomsg pom
-	"echomsg occp
+	let occp = fnamemodify(findfile('.occp','.;'),":p")
 	" Test if the classpath file 'OmniComplete ClassPath' file already exists
 	" If it exists do nothing
 	if !filereadable(occp) || overwrite == 1
-		"echomsg "Exists not: ".occp
-		let occp = pom[:-8].".occp"
+		let pom = fnamemodify(findfile('pom.xml','.;'),":p")
+		let cwd = fnamemodify(pom,":h")
+		"echomsg cwd
+		"echomsg pom
+		echomsg "Did not find .occp."
+		let occp = cwd."/.occp"
 		" Test if it is a maven project
 		" If so generate the classpath
 		if filereadable(pom)
-			"echomsg "Exists: ".pom
+			echomsg "Found pom: ".pom
 			if executable('mvn')
 				"echomsg "MVN found"
 				echomsg "mvn -f ".pom." -Dmdep.outputFile=".occp." dependency:build-classpath &"
 				exe ":silent !mvn -f ".pom." -Dmdep.outputFile=".occp." dependency:build-classpath &"
 				"echomsg "MVN task finished"
 			endif
+		else
+			echomsg "Did not find pom.xml."
 		endif
 	endif
 	if filereadable(occp)
@@ -85,6 +84,8 @@ function! SetJavaClasspath(...)
 			echomsg "Set classpath to: ".classpath
 			call javacomplete#SetClassPath(classpath)
 		"endif
+	else
+		echomsg "Do nothing"
 	endif
 endfunction
 map <F8> :call SetJavaClasspath()<CR>
