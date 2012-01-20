@@ -73,11 +73,10 @@ fu! FileTime()
 endf
 
 fu! CurTime()
-        let ftime=""
-        let ftime=ftime." ".strftime("%H:%M:%S")
-        return ftime
+  let ftime=""
+  let ftime=ftime." ".strftime("%H:%M:%S")
+  return ftime
 endf 
-
 
 " Configuration
 if has('win32') || has('win32unix') "windows/cygwin 

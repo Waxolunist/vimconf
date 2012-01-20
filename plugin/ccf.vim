@@ -80,12 +80,14 @@ function! SetJavaClasspath(...)
 		"echomsg "Exists: ".occp
 		"if exists('*javacomplete#SetClassPath')
 			"echomsg "javacomplete exists"
+		  let cwd = fnamemodify(occp,":h")
 			let classpath = readfile(occp,'b')[0]
-			echomsg "Set classpath to: ".classpath
-			call javacomplete#SetClassPath(classpath)
+			echomsg "Set classpath to: ".classpath.';'.cwd.'/target/classes;'.cwd.'/target/test-classes'
+			call javacomplete#SetClassPath(classpath.';'.cwd.'/target/classes;'.cwd.'/target/test-classes')
 		"endif
 	else
 		echomsg "Do nothing"
 	endif
 endfunction
 map <F8> :call SetJavaClasspath()<CR>
+map <C-F8> :call SetJavaClasspath()<CR>

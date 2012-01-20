@@ -166,6 +166,10 @@ Editing:
 
 	Toggle Uppercase to Lowercase and vice-versa >
 		~
+  
+  Line endings - remove ^M chars (see http://jeetworks.org/node/73): >
+    :e ++ff=dos
+    :w ++ff=unix
 
 
 Help system:
