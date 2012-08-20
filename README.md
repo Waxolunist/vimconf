@@ -22,7 +22,7 @@ The structure of this project is very simple. On Windows just copy the files to 
 
 Depending on which system you are, the files and plugins are sourced.
 
-If you are using the vim version with gui **gvim** the file *gvimrc_base* is loaded. The file *vimrc_base* will alway be loaded.
+If you are using the vim version with gui **gvim** the file *gvimrc_base* is loaded. The file *vimrc_base* will always be loaded.
 
 # Plugins
 
@@ -46,6 +46,10 @@ Following Plugins am I delivering:
   This plugin by me formats, converts and compiles with external programs
 - [javacomplete 0.77.1.2](http://www.vim.org/scripts/script.php?script_id=1785)
   Omni Completion for JAVA 
+- [Asciidoc](http://www.methods.co.nz/asciidoc/)
+  The asciidoc syntax highlighting and ftdetect-plugins
+- [VOoM : Vim two-pane outliner](http://www.vim.org/scripts/script.php?script_id=2657)
+  VOoM (Vim Outliner of Markers) is a plugin for Vim that emulates a two-pane text outliner.
 
 ## Changes made to the plugins
 
@@ -124,3 +128,7 @@ Often I forget some shortcuts. I write them all down in *doc/my.txt* and open th
 
 Currently I am using version 7.3 of vim.
 All plugins were updated on 01/13/2012.
+
+Last updates to this document: 
+- 08/20/2012: asciidoc support added
+- 08/20/2012: voom plugin added

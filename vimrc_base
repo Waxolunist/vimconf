@@ -115,6 +115,8 @@ set shiftwidth=2
 set linebreak
 set nu
 
+let voom_tree_placement = 'right'
+
 let moria_style = 'dark'
 colors moria
 
