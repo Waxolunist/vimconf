@@ -36,7 +36,7 @@ Following Plugins am I delivering:
   Buffer Explorer / Browser - Switch between buffers easily
 - [winmanger 2.35](http://www.vim.org/scripts/script.php?script_id=1440)
   Windows style IDE for VIM
-- [Better CSS Syntax for Vim 20110302](http://www.vim.org/scripts/script.php?script_id=3220)
+- [css3 : css3 syntax for vim](http://www.vim.org/scripts/script.php?script_id=3042)
   CSS syntax highlighting with support for CSS3
 - [moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
   A color scheme for GUI supposed to be highly readable
@@ -50,6 +50,10 @@ Following Plugins am I delivering:
   The asciidoc syntax highlighting and ftdetect-plugins
 - [VOoM : Vim two-pane outliner](http://www.vim.org/scripts/script.php?script_id=2657)
   VOoM (Vim Outliner of Markers) is a plugin for Vim that emulates a two-pane text outliner.
+- [html5.vim : HTML5 omnicomplete funtion and syntax for Vim](http://www.vim.org/scripts/script.php?script_id=3236)
+  HTML5 omnicomplete funtion and syntax for Vim. Based on the default htmlcomplete.vim. 
+- [vim-stylus : Syntax/Indentation for Stylus](http://www.vim.org/scripts/script.php?script_id=3513)
+  Syntax hightlighting for Stylus 
 
 ## Changes made to the plugins
 
@@ -130,5 +134,6 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 01/13/2012.
 
 Last updates to this document: 
+- 09/13/2012: html5, css3, stylus support
 - 08/20/2012: asciidoc support added
 - 08/20/2012: voom plugin added
