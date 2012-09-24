@@ -15,7 +15,6 @@
 " Globals:	g:html_indent_tags	   -- indenting tags
 "		g:html_indent_strict       -- inhibit 'O O' elements
 "		g:html_indent_strict_table -- inhibit 'O -' elements
-
 " Only load this indent file when no other was loaded.
 if exists("b:did_indent")
     finish
