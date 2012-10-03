@@ -54,6 +54,8 @@ Following Plugins am I delivering:
   HTML5 omnicomplete funtion and syntax for Vim. Based on the default htmlcomplete.vim. 
 - [vim-stylus : Syntax/Indentation for Stylus](http://www.vim.org/scripts/script.php?script_id=3513)
   Syntax hightlighting for Stylus 
+- [asciidoc-syntax](https://github.com/dagwieers/asciidoc-vim)
+  Syntax highlighting for Asciidoc (Changed dark colors to light colors)
 
 ## Changes made to the plugins
 
