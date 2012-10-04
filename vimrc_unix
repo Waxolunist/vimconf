@@ -18,3 +18,7 @@ endfunction
 call InitSyntax()
 
 autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
+
+" Change directory to the current file
+" See http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
+autocmd BufEnter * silent! lcd %:p:h

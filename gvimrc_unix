@@ -8,8 +8,10 @@ if has("gui_running")
 	endif
 endif 
 
-set lines=39
-set columns=125
+" Maximize Window running unix
+" See http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
+set lines=999
+set columns=999
 
 set guioptions-=m
 set guioptions-=T
