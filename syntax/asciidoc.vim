@@ -262,7 +262,7 @@ let b:current_syntax = "asciidoc"
 
 "Show tab and trailing characters
 set listchars=tab:»·,trail:·
-set list
+set nolist
 
 "
 "set textwidth=78 formatoptions=tcqn autoindent

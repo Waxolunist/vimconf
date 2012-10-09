@@ -100,6 +100,39 @@ set shellslash
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
 
+let voom_tree_placement = 'right'
+
+let moria_style = 'dark'
+colors moria
+
+let g:defaultExplorer=0
+let g:persistentBehaviour=0
+map <c-w><c-t> :WMToggle<cr> 
+map <c-w><c-f> :FirstExplorerWindow<cr>
+map <c-w><c-b> :BottomExplorerWindow<cr>
+
+vmap <silent> <Right> l
+vmap <silent> <Left> h
+vmap <silent> <Up> gk
+vmap <silent> <Down> gj
+nmap <silent> <Right> l
+nmap <silent> <Left> h
+nmap <silent> <Up> gk
+nmap <silent> <Down> gj
+imap <silent> <Up> <C-o>gk
+imap <silent> <Down> <C-o>gj
+
+if has("autocmd")
+	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
+endif
+inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
+inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
+inoremap <c-space> <c-x><c-o>
+
+set statusline=%<%f%<%{FileTime()}%<%h%m%r%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
+set rulerformat=%15(%c%V\ %p%%%)
+
 " OPTIONAL: This enables automatic indentation as you type.
 filetype indent on
 syntax on
@@ -112,35 +145,12 @@ set foldmethod=syntax
 set ls=2
 set shiftwidth=2
 
-set linebreak
 set nu
+set wrap
+set linebreak
+set nolist
 
-let voom_tree_placement = 'right'
-
-let moria_style = 'dark'
-colors moria
-
-let g:defaultExplorer=0
-let g:persistentBehaviour=0
-map <c-w><c-t> :WMToggle<cr> 
-map <c-w><c-f> :FirstExplorerWindow<cr>
-map <c-w><c-b> :BottomExplorerWindow<cr>
-
-vnoremap <Right> l
-vnoremap <Left> h
-vnoremap <Up> k
-vnoremap <Down> j
-
-if has("autocmd")
-	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
-endif
-inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
-inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
-inoremap <c-space> <c-x><c-o>
-
-set statusline=%<%f%<%{FileTime()}%<%h%m%r%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
-set rulerformat=%15(%c%V\ %p%%%)
+command! -nargs=* Wrap set wrap linebreak nolist
 
 call InitBackupDir()
 
