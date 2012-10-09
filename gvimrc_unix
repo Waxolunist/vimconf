@@ -10,10 +10,12 @@ endif
 
 " Maximize Window running unix
 " See http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
-set lines=999
-set columns=999
+function! MaximizeWindow()
+  set lines=999
+  set columns=999
+endfunction
 
 set guioptions-=m
 set guioptions-=T
 
-
+autocmd GUIEnter * :call MaximizeWindow()
