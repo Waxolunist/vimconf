@@ -73,6 +73,7 @@ let utl__file_rc =    expand("<sfile>")	    " Do not remove this line
 	    "
 	    " 2nd best solution: explicitly configured browser:
 	    "
+	    let g:utl_cfg_hdl_scm_http_system = "silent !xdg-open '%u#%f' &"
 	    "	Konqueror
 	    "let g:utl_cfg_hdl_scm_http_system = "silent !konqueror '%u#%f' &"
 	    "
@@ -216,6 +217,8 @@ let utl__file_rc =    expand("<sfile>")	    " Do not remove this line
 	elseif has("unix")
 	    if $WINDOWMANAGER =~? 'kde'
 		let g:utl_cfg_hdl_mt_generic = 'silent !konqueror "%p" &'
+      else
+		let g:utl_cfg_hdl_mt_generic = 'silent !xdg-open "%p" &'
 	    endif
 	    " ? Candidate for Debian/Ubuntu: 'silent !xdg-open %u'
 	endif

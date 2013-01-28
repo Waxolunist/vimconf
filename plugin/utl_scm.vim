@@ -54,8 +54,8 @@
 "
 "   * Empty list means: no subsequent processing by Utl.vim
 "     Examples where this makes sense:
-"     ° If the retrieve was not successful, or
-"     ° if handler already cared for displaying the file (e.g. URL
+"     Â° If the retrieve was not successful, or
+"     Â° if handler already cared for displaying the file (e.g. URL
 "       delegated to external handler)
 "
 "   * 1st list element = file name (called localPath) provided means:
@@ -70,10 +70,10 @@
 "     c) Fragment will be processed (if any).
 "
 "     Details :
-"     ° File name should be a pathname to (an existing) local file or directory.
+"     Â° File name should be a pathname to (an existing) local file or directory.
 "       Note : the 
-"     ° File name's path separator should be slash (not backslash).
-"     ° It does not hurt if file is already displayed (an example for this is
+"     Â° File name's path separator should be slash (not backslash).
+"     Â° It does not hurt if file is already displayed (an example for this is
 "       vimhelp scheme).
 "
 "   * 2nd list element = fragment Mode (fragMode). Allowed values:
