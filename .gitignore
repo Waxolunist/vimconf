@@ -1,3 +1,5 @@
 tmp
 backup
 .netrw*
+.VimballRecord
+*.pyc
