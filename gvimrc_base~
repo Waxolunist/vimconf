@@ -15,6 +15,6 @@ endif
 " noremap  <Right> ""
 " noremap! <Right> <Esc>
 
-:nmap gu :Utl<cr>
+:map gu :Utl<cr>
 
 
