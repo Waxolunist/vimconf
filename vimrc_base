@@ -122,6 +122,10 @@ nmap <silent> <Down> gj
 imap <silent> <Up> <C-o>gk
 imap <silent> <Down> <C-o>gj
 
+:command Bash call conque_term#open('bash')
+cnoremap sh Bash
+
+
 if has("autocmd")
 	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 

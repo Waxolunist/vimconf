@@ -62,6 +62,8 @@ Following Plugins am I delivering:
   manage your runtimepath
 - [fugitive](https://github.com/tpope/vim-fugitive)
   git wrapper
+- [ConqueTerm 2.2](http://www.vim.org/scripts/script.php?script_id=2771)
+  Run interactive commands inside a Vim buffer 
 
 ## Changes made to the plugins
 
@@ -158,6 +160,8 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 01/13/2012.
 
 Last updates to this document: 
+- 18/02/2013: Unix-only: mapped :sh to :ConqueTerm bash
+- 18/02/2013: installed conqueterm 2.2
 - 18/02/2013: installed fugitive.vim (see https://github.com/tpope/vim-fugitive)
 - 18/02/2013: installed pathogen.vim (see https://github.com/tpope/vim-pathogen)
 - 18/02/2013: improved utl script (see http://vim.wikia.com/wiki/Script:293)
