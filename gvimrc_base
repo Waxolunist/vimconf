@@ -16,5 +16,7 @@ endif
 " noremap! <Right> <Esc>
 
 :nmap gu :Utl<cr>
-
+let g:utl_opt_highlight_urls='yes'
+let g:utl_opt_verbose=0		    " 0=no (default), 1=yes
+nmap ,l :exe ":Utl ol http://dict.leo.org/?search=" . expand("<cword>")
 

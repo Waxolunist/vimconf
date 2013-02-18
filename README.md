@@ -32,11 +32,11 @@ Following Plugins am I delivering:
   Syntax highlight for Markdown text files
 - [snipMate 0.8.3](http://www.vim.org/scripts/script.php?script_id=2540)
   TextMate-style snippets support
-- [bufexplorer 7.2.8](http://www.vim.org/scripts/script.php?script_id=42)
+- [bufexplorer 7.3.5](http://www.vim.org/scripts/script.php?script_id=42)
   Buffer Explorer / Browser - Switch between buffers easily
-- [winmanger 2.35](http://www.vim.org/scripts/script.php?script_id=1440)
+- [winmanger 2.41](http://www.vim.org/scripts/script.php?script_id=1440)
   Windows style IDE for VIM
-- [css3 : css3 syntax for vim](http://www.vim.org/scripts/script.php?script_id=3042)
+- [css3 : css3 syntax for vim 2.1](http://www.vim.org/scripts/script.php?script_id=3042)
   CSS syntax highlighting with support for CSS3
 - [moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
   A color scheme for GUI supposed to be highly readable
@@ -48,18 +48,27 @@ Following Plugins am I delivering:
   Omni Completion for JAVA 
 - [Asciidoc](http://www.methods.co.nz/asciidoc/)
   The asciidoc syntax highlighting and ftdetect-plugins
-- [VOoM : Vim two-pane outliner](http://www.vim.org/scripts/script.php?script_id=2657)
+- [VOoM : Vim two-pane outliner 4.7](http://www.vim.org/scripts/script.php?script_id=2657)
   VOoM (Vim Outliner of Markers) is a plugin for Vim that emulates a two-pane text outliner.
-- [html5.vim : HTML5 omnicomplete funtion and syntax for Vim](http://www.vim.org/scripts/script.php?script_id=3236)
+- [html5.vim : HTML5 omnicomplete funtion and syntax for Vim 0.27](http://www.vim.org/scripts/script.php?script_id=3236)
   HTML5 omnicomplete funtion and syntax for Vim. Based on the default htmlcomplete.vim. 
-- [vim-stylus : Syntax/Indentation for Stylus](http://www.vim.org/scripts/script.php?script_id=3513)
+- [vim-stylus : Syntax/Indentation for Stylus 0.8.3](http://www.vim.org/scripts/script.php?script_id=3513)
   Syntax hightlighting for Stylus 
 - [asciidoc-syntax](https://github.com/dagwieers/asciidoc-vim)
   Syntax highlighting for Asciidoc (Changed dark colors to light colors)
+- [utl 3.0a](http://www.vim.org/scripts/script.php?script_id=293)
+  Univeral Text Linking - Execute URLs, footnotes, open emails, organize ideas
+- [pathogen](https://github.com/tpope/vim-pathogen)
+  manage your runtimepath
+- [fugitive](https://github.com/tpope/vim-fugitive)
+  git wrapper
 
 ## Changes made to the plugins
 
-I added some syntax definitions to markdown to support github flavored markdown syntax.
+Changes made to the plugins
+
+- I added some syntax definitions to markdown to support github flavored markdown syntax.
+- I improved utl a bit (see http://vim.wikia.com/wiki/Script:293).
 
 # Functions
 
@@ -78,6 +87,7 @@ Outputs the Modified date of the current file
 - *CurTime()*
 Outputs the current time
 
+
 ## From ccf.vim:
 
 - *CompileSASS()* or *:SASS*
@@ -92,6 +102,12 @@ If you want to reset the java classpath call it with the argument 1 *:call SetJa
 depending on your pom.xml. It creates a classpath file .occp (OmniCompletionClassPath) for faster running the next time next to your pom.xml.
 To rerun this function on next start of vim, just hit <F8>. Alternatively you can create your own .occp-File manually.
 
+# Commands
+
+- :Voom *templatelanguage*
+e.g. Voom rest or Voom asciidoc 
+Opens the hierarchy view on the right side.
+
 # Shortcuts
 	
 - *Ctrl-w Ctrl-t*
@@ -104,6 +120,12 @@ Switches to the buffer explorer of the WindowManager
 Completion in java code (Hold the ctrl-key down to choose from completion)
 - *<F8>*
 Reset the classpath from your .occp file next to your pom.xml or generate the .occp.
+- *Shift-S*
+Pressing "S" in the the FileManager opens the current file in the correct app.
+- *gu*
+Opens the url under the cursor (see utl.vim)
+- *,l*
+Search for the dictionary entry at http://dict.leo.org
 
 # Documentation
 
@@ -136,6 +158,12 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 01/13/2012.
 
 Last updates to this document: 
+- 18/02/2013: installed pathogen.vim (see https://github.com/tpope/vim-pathogen)
+- 18/02/2013: improved utl script (see http://vim.wikia.com/wiki/Script:293)
+- 18/02/2013: updated voom to version 4.7
+- 18/02/2013: updated bufexplorer to version 7.3.5
+- 18/02/2013: installed utl version 3.0a ALPHA
+- 18/02/2013: updated winmanager to version 2.41
 - 09/13/2012: html5, css3, stylus support
 - 08/20/2012: asciidoc support added
 - 08/20/2012: voom plugin added

@@ -1069,7 +1069,7 @@ Lookup word						*utl-lookupWord*
 You can use Utl's web browser integration to look up the word under cursor in
 the dictionary or encyclopedia of your choice with a mapping like:
 
-    nmap ,l :exe ":Utl ol http://dict.leo.org/?search=" . expand("<cword>")
+    nmap ,l :exe ":Utl ol http://dict.leo.org/?search=" . expand("<cword>")
 
 This is practical for spell checking (despite Vim built in spell checker). The
 following mapping is similar:
@@ -1982,17 +1982,17 @@ Barrie Stott <G.B.Stott at bolton.ac.uk>, for helping a lot with the
 REKellyIV <Feral at FireTop.Com>
 Klaus Horsten <horsten at gmx.at>.
 Patrik Nyman <patrik.nyman at orient.su.se>
-Engelhard He√ü <Engelhard.Hess at artofbits.de>
+Engelhard Heﬂ <Engelhard.Hess at artofbits.de>
 Grant Bowman <grantbow at grantbow.com>
 Ward Fuller <wfuller at SeeBeyond.com>
 Mark S. Thomas <Mark.Thomas at SWFWMD.STATE.FL.US>
 William Natter <wnatter at nortelnetworks.com>
 Alex Jakushev <Alex.Jakushev at kemek.lt>
 Geoff Caplan <geoff at advantae.com>
-Bruno D√≠az <bruno.diaz at gmx.net>
+Bruno DÌaz <bruno.diaz at gmx.net>
 Michael Lesniak <ich at mlesniak.de>
 Janek Kozicki <janek at thenut.eti.pg.gda.pl>
-Olivier Teuli√®re <ipkiss at via.ecp.fr>
+Olivier TeuliËre <ipkiss at via.ecp.fr>
 Nathan Howell <nathan at atdot.ca> 
 Samuel Wright <sam.wright@celoxica.com>
 clemens fischer <ino-qc@spotteswoode.de.eu.org>

@@ -403,9 +403,15 @@ fu! Utl_getUrlUnderCursor()
     else
 	call Utl_trace("- ...no", 1,-1)
     endif
-
+    
     call Utl_trace("- end getting URL under cursor.",1,-1) 
-    return url
+    let tmpurl = matchstr(url, '^[(]\?.*[)]\+$')
+    if empty(tmpurl)
+      return url
+    else
+      call Utl_trace("- found braces around url, removing.",1,-1) 
+      return substitute(url, '^[(]\?\(.*\)[)]\+$', '\1', 'g')
+    endif
 endfu
 
 "--------------------------------------------------------id=thl_curl------------
