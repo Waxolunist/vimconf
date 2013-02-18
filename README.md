@@ -158,6 +158,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 01/13/2012.
 
 Last updates to this document: 
+- 18/02/2013: installed fugitive.vim (see https://github.com/tpope/vim-fugitive)
 - 18/02/2013: installed pathogen.vim (see https://github.com/tpope/vim-pathogen)
 - 18/02/2013: improved utl script (see http://vim.wikia.com/wiki/Script:293)
 - 18/02/2013: updated voom to version 4.7
