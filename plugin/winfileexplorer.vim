@@ -680,9 +680,9 @@ function! s:ShellExecute()
     exec "silent ! start \"\" \"".substitute(fn, "/", "\\", "g")."\""
   else
 	if (exists("g:netrw_browsex_viewer"))
-		exec "silent !" . g:netrw_browsex_viewer . " \'".fn."\'"
+    exec "silent !" . g:netrw_browsex_viewer . " \'".fn."\'"
 	else
-		exec "silent !xdg-open \'".fn."\'"
+		exec "silent !xdg-open \'".fn."\' &"
 	endif
   endif
 endfunction
