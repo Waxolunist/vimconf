@@ -67,6 +67,7 @@ SearchInColumn_CSV	ft-csv.txt	/*SearchInColumn_CSV*
 SetJavaClasspath()	my.txt	/*SetJavaClasspath()*
 Sort_CSV	ft-csv.txt	/*Sort_CSV*
 SumCol_CSV	ft-csv.txt	/*SumCol_CSV*
+Table	ft-csv.txt	/*Table*
 Transpose_CSV	ft-csv.txt	/*Transpose_CSV*
 UnArrangeColumn_CSV	ft-csv.txt	/*UnArrangeColumn_CSV*
 Utl-chgOverview	utl_usr.txt	/*Utl-chgOverview*
@@ -141,6 +142,7 @@ csv-mbyte	ft-csv.txt	/*csv-mbyte*
 csv-move-folds	ft-csv.txt	/*csv-move-folds*
 csv-newline	ft-csv.txt	/*csv-newline*
 csv-nrformat	ft-csv.txt	/*csv-nrformat*
+csv-replace-col	ft-csv.txt	/*csv-replace-col*
 csv-slow	ft-csv.txt	/*csv-slow*
 csv-stl	ft-csv.txt	/*csv-stl*
 csv-strict	ft-csv.txt	/*csv-strict*

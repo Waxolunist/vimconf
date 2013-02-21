@@ -129,6 +129,17 @@ if has("autocmd")
 	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
 endif
+
+" Always show csv files as tables, don't preserve the spaces
+" Set the cursorline in csv files
+aug CSV_Editing
+  au!
+  au BufRead,BufWritePost *.csv :%ArrangeColumn
+  au BufWritePre *.csv :%UnArrangeColumn
+  au VimEnter,WinEnter,BufWinEnter *.csv setlocal cursorline
+  au WinLeave *.csv setlocal nocursorline
+aug end
+
 inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
 inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
 inoremap <c-space> <c-x><c-o>

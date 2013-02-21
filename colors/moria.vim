@@ -40,7 +40,7 @@ if &background == "dark"
 
         hi ColorColumn ctermbg=8 ctermfg=15 guibg=#494949 gui=none
         hi CursorColumn ctermbg=8 ctermfg=15 guibg=#404040 gui=none
-        hi CursorLine ctermbg=8 ctermfg=15 guibg=#404040 gui=none
+        hi CursorLine ctermbg=8 ctermfg=15 guibg=#BEBEBE gui=none
     elseif s:moria_style == "black"
         hi Normal ctermbg=0 ctermfg=7 guibg=#000000 guifg=#d0d0d0 gui=none
 

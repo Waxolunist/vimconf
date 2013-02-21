@@ -64,13 +64,16 @@ Following Plugins am I delivering:
   git wrapper
 - [ConqueTerm 2.2](http://www.vim.org/scripts/script.php?script_id=2771)
   Run interactive commands inside a Vim buffer 
+- [CSV 0.28](http://www.vim.org/scripts/script.php?script_id=2830)
+  A Filetype plugin for csv files. 
 
 ## Changes made to the plugins
 
 Changes made to the plugins
 
-- I added some syntax definitions to markdown to support github flavored markdown syntax.
-- I improved utl a bit (see http://vim.wikia.com/wiki/Script:293).
+- Added some syntax definitions to markdown to support github flavored markdown syntax.
+- Improved utl a bit (see http://vim.wikia.com/wiki/Script:293).
+- Modified winfileexplorer.vim line 685 to call xdg-open instead of start on unix-systems.
 
 # Functions
 
@@ -157,10 +160,12 @@ Often I forget some shortcuts. I write them all down in *doc/my.txt* and open th
 # Versions
 
 Currently I am using version 7.3 of vim.
-All plugins were updated on 01/13/2012.
+All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
-- 18/02/2013: Unix-only: mapped :sh to :ConqueTerm bash
+- 21/02/2013: Updated CSV plugin to version 0.28
+- 21/02/2013: Unix-only: <Shift-S> in fileexplorer works now in gnome (see changes)
+- 18/02/2013: Unix-only: mapped :Bash to :ConqueTerm bash
 - 18/02/2013: installed conqueterm 2.2
 - 18/02/2013: installed fugitive.vim (see https://github.com/tpope/vim-fugitive)
 - 18/02/2013: installed pathogen.vim (see https://github.com/tpope/vim-pathogen)
