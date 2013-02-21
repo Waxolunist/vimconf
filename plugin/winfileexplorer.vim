@@ -682,7 +682,7 @@ function! s:ShellExecute()
 	if (exists("g:netrw_browsex_viewer"))
 		exec "silent !" . g:netrw_browsex_viewer . " \'".fn."\'"
 	else
-		exec "silent !start \'".fn."\'"
+		exec "silent !xdg-open \'".fn."\'"
 	endif
   endif
 endfunction
