@@ -17,3 +17,6 @@ Folding,Unfold,Normal,zR,-,Unfolds everything,
 Git,Git status,Normal,:Gstatus,-,Shows the current status of the working tree,
 Git,Git add,Normal,:Git add .,-,Calls "git add .",
 Help,Show help,Normal,:h CTRL-?,-,Shows the help to a shortcut with CTRL,
+Python,IntelliSense,Insert,-,<Ctrl-Space>,Open OmniComplete suggestions
+OmniComplete,IntelliSense Move down,OmniComplete,-,<Ctrl-O>,Moves in the suggestionlist down,
+OmniComplete,IntelliSense Move up,OmniComplete,-,<Ctrl-P>,Moves in the suggestionlist up,

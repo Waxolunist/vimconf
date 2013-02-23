@@ -126,23 +126,32 @@ imap <silent> <Down> <C-o>gj
 
 
 if has("autocmd")
-	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
+  aug filetype_java
+    au!
+	  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+  	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
+    autocmd Filetype java inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
+    autocmd Filetype java inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
+    autocmd Filetype java inoremap <c-space> <c-x><c-o>
+  aug end
+
+  aug filetype_python
+    au!
+    au FileType py set omnifunc=pythoncomplete#Complete
+    autocmd Filetype py inoremap <c-space> <c-x><c-n> 
+  aug end
+
+  " Always show csv files as tables, don't preserve the spaces
+  " Set the cursorline in csv files
+  aug CSV_Editing
+    au!
+    au BufRead,BufWritePost *.csv :%ArrangeColumn
+    au BufWritePre *.csv :%UnArrangeColumn
+    au VimEnter,WinEnter,BufWinEnter *.csv setlocal cursorline
+    au WinLeave *.csv setlocal nocursorline
+  aug end
 endif
 
-" Always show csv files as tables, don't preserve the spaces
-" Set the cursorline in csv files
-aug CSV_Editing
-  au!
-  au BufRead,BufWritePost *.csv :%ArrangeColumn
-  au BufWritePre *.csv :%UnArrangeColumn
-  au VimEnter,WinEnter,BufWinEnter *.csv setlocal cursorline
-  au WinLeave *.csv setlocal nocursorline
-aug end
-
-inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
-inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
-inoremap <c-space> <c-x><c-o>
 
 set statusline=%<%f%<%{FileTime()}%<%h%m%r%<%{fugitive#statusline()}%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
 set rulerformat=%15(%c%V\ %p%%%)
@@ -167,4 +176,4 @@ set nolist
 command! -nargs=* Wrap set wrap linebreak nolist
 
 call InitBackupDir()
-
+call pathogen#infect()

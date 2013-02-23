@@ -24,6 +24,10 @@ Depending on which system you are, the files and plugins are sourced.
 
 If you are using the vim version with gui **gvim** the file *gvimrc_base* is loaded. The file *vimrc_base* will always be loaded.
 
+If you are using omnicompletion for vim you need also python installed with jedi (see https://github.com/davidhalter/jedi-vim):
+
+    $ pip install jedi
+
 # Plugins
 
 Following Plugins am I delivering:
@@ -66,6 +70,8 @@ Following Plugins am I delivering:
   Run interactive commands inside a Vim buffer 
 - [CSV 0.28](http://www.vim.org/scripts/script.php?script_id=2830)
   A Filetype plugin for csv files. 
+- [jedi-vim](https://github.com/davidhalter/jedi-vim)
+  Using the python jedi autocompletion library for VIM.
 
 ## Changes made to the plugins
 
@@ -163,6 +169,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 22/02/2013: installed jedi-vim (current from master)
 - 21/02/2013: Updated CSV plugin to version 0.28
 - 21/02/2013: Unix-only: <Shift-S> in fileexplorer works now in gnome (see changes)
 - 18/02/2013: Unix-only: mapped :Bash to :ConqueTerm bash
