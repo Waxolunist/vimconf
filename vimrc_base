@@ -137,8 +137,7 @@ if has("autocmd")
 
   aug filetype_python
     au!
-    au FileType py set omnifunc=pythoncomplete#Complete
-    autocmd Filetype py inoremap <c-space> <c-x><c-n> 
+    au FileType python setl sw=2 sts=2 et
   aug end
 
   " Always show csv files as tables, don't preserve the spaces
@@ -152,6 +151,8 @@ if has("autocmd")
   aug end
 endif
 
+noremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Use_Right_Window = 1
 
 set statusline=%<%f%<%{FileTime()}%<%h%m%r%<%{fugitive#statusline()}%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
 set rulerformat=%15(%c%V\ %p%%%)

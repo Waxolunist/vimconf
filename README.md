@@ -28,6 +28,8 @@ If you are using omnicompletion for vim you need also python installed with jedi
 
     $ pip install jedi
 
+To use the taglist plugin you need to install the exuberant ctags library.
+
 # Plugins
 
 Following Plugins am I delivering:
@@ -72,6 +74,10 @@ Following Plugins am I delivering:
   A Filetype plugin for csv files. 
 - [jedi-vim](https://github.com/davidhalter/jedi-vim)
   Using the python jedi autocompletion library for VIM.
+- [taglist 4.5](http://www.vim.org/scripts/script.php?script_id=273)
+  Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
+- [indent/python](https://github.com/hynek/vim-python-pep8-indent)
+  An alternative indentation script for python
 
 ## Changes made to the plugins
 
@@ -169,6 +175,8 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 23/02/2013: installed indent for python (https://github.com/hynek/vim-python-pep8-indent)
+- 23/02/2013: installed taglist 4.5
 - 22/02/2013: installed jedi-vim (current from master)
 - 21/02/2013: Updated CSV plugin to version 0.28
 - 21/02/2013: Unix-only: <Shift-S> in fileexplorer works now in gnome (see changes)
