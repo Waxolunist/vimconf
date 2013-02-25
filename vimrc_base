@@ -133,6 +133,7 @@ if has("autocmd")
     autocmd Filetype java inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
     autocmd Filetype java inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
     autocmd Filetype java inoremap <c-space> <c-x><c-o>
+    autocmd Filetype java map <C-F8> :call SetJavaClasspath()<CR>
   aug end
 
   aug filetype_python

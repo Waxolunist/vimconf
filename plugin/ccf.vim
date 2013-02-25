@@ -89,4 +89,3 @@ function! SetJavaClasspath(...)
 		echomsg "Do nothing"
 	endif
 endfunction
-map <C-F8> :call SetJavaClasspath()<CR>
