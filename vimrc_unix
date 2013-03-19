@@ -23,4 +23,4 @@ autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
 " See http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
 autocmd BufEnter * silent! lcd %:p:h
 
-" set shell=/bin/bash\ --rcfile\ ~/.vim/.bashvimrc
+set clipboard=unnamedplus

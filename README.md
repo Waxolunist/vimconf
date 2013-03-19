@@ -78,6 +78,8 @@ Following Plugins am I delivering:
   Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
 - [indent/python](https://github.com/hynek/vim-python-pep8-indent)
   An alternative indentation script for python
+- [vim-jade](https://github.com/digitaltoad/vim-jade)
+  Jade syntax highlighting
 
 ## Changes made to the plugins
 
@@ -175,6 +177,8 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 19/03/2013: installed vim-jade (https://github.com/digitaltoad/vim-jade)
+- 19/03/2013: configured <c-space> as autocomplete command in html files
 - 23/02/2013: installed indent for python (https://github.com/hynek/vim-python-pep8-indent)
 - 23/02/2013: installed taglist 4.5
 - 22/02/2013: installed jedi-vim (current from master)
