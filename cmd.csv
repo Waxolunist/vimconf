@@ -1,6 +1,8 @@
 ﻿Group,Shortname,Mode,Command,Shortcut,Comment,
 Buffer,Delete Buffer,Normal,:bd,-,Closes the current buffer,
 Buffer,Cycle Buffers,Normal,-,<Ctrl-6>,Cycles through buffers,
+Calculating,Increment number,Normal,-,<Ctrl-a> or <Alt-a>,Increments number under cursor - use Ctrl on linux and Alt on windows,
+Calculating,Decrement number,Normal,-,<Ctrl-x> or <Alt-x>,Decrements number under cursor - use Ctrl on linux and Alt on windows,
 Copy,Copy line,Normal,-,Nyy,copy current / N next lines,
 CSV,Arrange cols,Normal,:%ArrangeColumn!,-,Arranges all columns - ! forces recalculation,
 CSV,Unarrange cols,Normal,:%UnArrangeColumn,-,Removes all trailing spaces - unarranges columns,

@@ -21,3 +21,6 @@ endfunction
 call InitSyntax()
 
 autocmd BufWritePost ~/vimfiles/doc/* :helptags ~/vimfiles/doc
+
+:nnoremap <A-a> <C-a>
+:nnoremap <A-x> <C-x>
