@@ -177,6 +177,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 10/04/2013: Updated fugitive to the latest master version
 - 20/03/2013: Remaped on windows <C-a> and <C-x> to <A-a> and <A-x>
 - 19/03/2013: installed vim-jade (https://github.com/digitaltoad/vim-jade)
 - 19/03/2013: configured <c-space> as autocomplete command in html files

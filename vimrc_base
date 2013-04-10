@@ -136,6 +136,10 @@ if has("autocmd")
     autocmd Filetype java map <C-F8> :call SetJavaClasspath()<CR>
   aug end
 
+  aug filetype_javascript
+    autocmd Filetype javascript inoremap <c-space> <c-x><c-o>
+  aug end
+
   aug filetype_python
     au!
     au FileType python setl sw=2 sts=2 et
