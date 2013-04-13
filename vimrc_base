@@ -182,4 +182,4 @@ set nolist
 command! -nargs=* Wrap set wrap linebreak nolist
 
 call InitBackupDir()
-call pathogen#infect()
+execute pathogen#infect()

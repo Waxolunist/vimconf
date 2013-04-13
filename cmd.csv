@@ -50,3 +50,5 @@ Window,Resize Window,Normal,:vertical resize N,N <Ctrl-w> +,increase current win
 Window,Resize Window,Normal,:vertical resize -N,N <Ctrl-w> -,decrease current window height N lines,
 Window,Close Window,Normal,:close,<Ctrl-w><Ctrl-c>,closes current window,
 Window,Put Window to fullsize,Normal,:on,-,closes all other windows,
+Window,Split Window horizontally,Normal,:sp,<Ctrl-w><Ctrl-s>,splits the current window horizontally,
+Window,Split Window vertically,Normal,:vs,<Ctrl-w><Ctrl-v>,splits the current window vertically,
