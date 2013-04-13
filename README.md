@@ -2,9 +2,11 @@
 
 This is my vim configuration of vim for windows, unix and mac. The unix-style does also work on macintosh (at least on Max OS X 10.3).
 
-I am a lot working on different operating system. Thanks to Bram Moolenar, I have at least my favourite editor on every system. Because I am also sometimes working on the terminal, I customized the vimrc, that it is working on Mac, Linux and Windows, at least on the most common versions of it. I try to support Cygwin as well. Because I always stumbled arround, getting my vim personalized, I decided to have at least the plugins and all the configuration files packaged.
+I am a lot working on different operating system and different environments. Thanks to Bram Moolenar, I have at least my favourite editor on every system. Because I am also sometimes working on the terminal, I customized the vimrc, that it is working on Mac, Linux and Windows, at least on the most common versions of it. I try to support Cygwin as well. Because I always stumbled arround, getting my vim personalized, I decided to have at least the plugins and all the configuration files packaged.
 
 My first customized vimrc is from a version something below 6.2. Since then it is evolving permanently and I am collecting some usefull scripts and plugins. Some are using external programs, maybe not available on all systems, but at least working on windows and debian, e.g. xmllint to format XML. I try to keep the plugins up to date.
+
+Basically, this configuration provides two modi operandi. One tailored to normal screens, and one tailored to small screens. The first one uses bufexplorer to switch between open buffers and winfileexplorer to navigate. Open this modus with <Ctrl-w><Ctrl-t>. The other one uses minibufexplorer and command-t (,t) to open files, which I start to prefer over the first one, because its a bit faster.
 
 # Structure and Installation
 
@@ -92,6 +94,12 @@ Following Plugins am I delivering:
   Jade syntax highlighting
 - [Command-T](https://github.com/wincent/Command-T)
   Fast, intuitive mechanism for opening files 
+- [Minibufexplorer](https://github.com/fholgado/minibufexpl.vim)
+  Elegant buffer explorer - takes very little screen space 
+- [JSLint](https://github.com/hallettj/jslint.vim)
+  VIM plugin and command line tool for running JSLint 
+- [Javascript](https://github.com/pangloss/vim-javascript)
+  JavaScript bundle for vim, this bundle provides syntax and indent plugins.
 
 ## Changes made to the plugins
 
@@ -189,6 +197,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 12/04/2013: Installed command-t, minibufexplorer, jslint, vim-javascript
 - 10/04/2013: Updated fugitive to the latest master version
 - 20/03/2013: Remaped on windows <C-a> and <C-x> to <A-a> and <A-x>
 - 19/03/2013: installed vim-jade (https://github.com/digitaltoad/vim-jade)

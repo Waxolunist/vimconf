@@ -179,6 +179,12 @@ set wrap
 set linebreak
 set nolist
 
+nnoremap <silent> ,t :CommandT<CR>
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavArrows = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplModSelTarget = 1 
+
 command! -nargs=* Wrap set wrap linebreak nolist
 
 call InitBackupDir()
