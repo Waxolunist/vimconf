@@ -102,6 +102,8 @@ Following Plugins am I delivering:
   A plugin that integrates JSHint with Vim
 - [Javascript](https://github.com/pangloss/vim-javascript)
   JavaScript bundle for vim, this bundle provides syntax and indent plugins.
+- [Tagbar](https://github.com/majutsushi/tagbar)
+  Vim plugin that displays tags in a window, ordered by class etc. 
 
 ## Changes made to the plugins
 
@@ -199,7 +201,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
-- 13/04/2013: Installed jshint
+- 13/04/2013: Installed jshint, tagbar
 - 12/04/2013: Installed command-t, minibufexplorer, jslint, vim-javascript
 - 10/04/2013: Updated fugitive to the latest master version
 - 20/03/2013: Remaped on windows <C-a> and <C-x> to <A-a> and <A-x>
