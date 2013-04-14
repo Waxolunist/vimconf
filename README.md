@@ -98,6 +98,8 @@ Following Plugins am I delivering:
   Elegant buffer explorer - takes very little screen space 
 - [JSLint](https://github.com/hallettj/jslint.vim)
   VIM plugin and command line tool for running JSLint 
+- [JSHint](https://github.com/walm/jshint.vim)
+  A plugin that integrates JSHint with Vim
 - [Javascript](https://github.com/pangloss/vim-javascript)
   JavaScript bundle for vim, this bundle provides syntax and indent plugins.
 
@@ -197,6 +199,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 13/04/2013: Installed jshint
 - 12/04/2013: Installed command-t, minibufexplorer, jslint, vim-javascript
 - 10/04/2013: Updated fugitive to the latest master version
 - 20/03/2013: Remaped on windows <C-a> and <C-x> to <A-a> and <A-x>
