@@ -138,6 +138,7 @@ if has("autocmd")
 
   aug filetype_javascript
     autocmd Filetype javascript inoremap <c-space> <c-x><c-o>
+    autocmd Filetype javascript map <F8> :TagbarToggle<CR>
   aug end
 
   aug filetype_python
