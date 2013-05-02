@@ -46,7 +46,7 @@ To use the command-t plugin you need to compile the extra libraries:
 
 Following Plugins am I delivering:
 
-- [Markdown 1.2.2](http://www.vim.org/scripts/script.php?script_id=2882)
+- [Markdown](https://github.com/plasticboy/vim-markdown/)
   Syntax highlight for Markdown text files
 - [snipMate 0.8.3](http://www.vim.org/scripts/script.php?script_id=2540)
   TextMate-style snippets support
@@ -201,6 +201,8 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 02/05/2013: Updated bundles command-T, tagbar, mini-bufexpl
+- 02/05/2013: Replaced markdown vim plugin with https://github.com/plasticboy/vim-markdown/
 - 13/04/2013: Installed jshint, tagbar
 - 12/04/2013: Installed command-t, minibufexplorer, jslint, vim-javascript
 - 10/04/2013: Updated fugitive to the latest master version
