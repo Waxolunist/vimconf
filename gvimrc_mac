@@ -1,6 +1,7 @@
-set guifont=Monaco:h14
-set lines=39
-set columns=103
+set guifont=Courier_New:h11:cDEFAULT
+set visualbell
+
+set clipboard=unnamed
 
 function InitSyntax()
 	let parent = $HOME .'/.vim/' 
@@ -15,3 +16,13 @@ function InitSyntax()
 endfunction
 
 call InitSyntax()
+
+function! MaximizeWindow()
+  set lines=999
+  set columns=999
+endfunction
+
+set guioptions-=m
+set guioptions-=T
+
+autocmd GUIEnter * :call MaximizeWindow()
