@@ -36,6 +36,11 @@ If you are using omnicompletion for vim you need also python installed with jedi
 
 To use the taglist plugin you need to install the exuberant ctags library.
 
+To use the plugins installed as git submodules you have to initialize them:
+
+    $ git submodule init
+    $ git submodule update
+
 To use the command-t plugin you need to compile the extra libraries:
 
     $ cd ~/.vim/bundle/command-T/ruby/command-t 
