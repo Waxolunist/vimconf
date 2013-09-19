@@ -3,7 +3,7 @@ set visualbell
 
 set clipboard=unnamed
 
-function InitSyntax()
+function! InitSyntax()
 	let parent = $HOME .'/.vim/' 
 	let syntaxdir = parent . 'syntax/' 
 	let syntaxfile = syntaxdir . 'css.vim'
