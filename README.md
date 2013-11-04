@@ -41,12 +41,6 @@ To use the plugins installed as git submodules you have to initialize them:
     $ git submodule init
     $ git submodule update
 
-To use the command-t plugin you need to compile the extra libraries:
-
-    $ cd ~/.vim/bundle/command-T/ruby/command-t 
-    $ ruby extconf.rb 
-    $ make
-
 # Plugins
 
 Following Plugins am I delivering:
