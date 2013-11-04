@@ -97,7 +97,7 @@ Following Plugins am I delivering:
   An alternative indentation script for python
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
   Jade syntax highlighting
-- [Command-T](https://github.com/wincent/Command-T)
+- [CtrlP](https://github.com/kien/ctrlp.vim)
   Fast, intuitive mechanism for opening files 
 - [Minibufexplorer](https://github.com/fholgado/minibufexpl.vim)
   Elegant buffer explorer - takes very little screen space 
@@ -174,6 +174,8 @@ Pressing "S" in the the FileManager opens the current file in the correct app.
 Opens the url under the cursor (see utl.vim)
 - *,l*
 Search for the dictionary entry at http://dict.leo.org
+- *,t*
+Search for files using CtrlP
 
 # Documentation
 
@@ -206,6 +208,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 04/11/2013: Substituted CommandT with CtrlP, because the ruby extension made problems on Maverick
 - 04/11/2013: Updated bundles html5, css3
 - 02/05/2013: Updated bundles command-T, tagbar, mini-bufexpl
 - 02/05/2013: Replaced markdown vim plugin with https://github.com/plasticboy/vim-markdown/
