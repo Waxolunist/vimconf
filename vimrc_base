@@ -180,7 +180,6 @@ set wrap
 set linebreak
 set nolist
 
-nnoremap <silent> ,t :CommandT<CR>
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
