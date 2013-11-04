@@ -206,6 +206,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 04/11/2013: Updated bundles html5, css3
 - 02/05/2013: Updated bundles command-T, tagbar, mini-bufexpl
 - 02/05/2013: Replaced markdown vim plugin with https://github.com/plasticboy/vim-markdown/
 - 13/04/2013: Installed jshint, tagbar
