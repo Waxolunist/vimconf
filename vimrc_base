@@ -139,8 +139,6 @@ if has("autocmd")
   aug filetype_javascript
     autocmd Filetype javascript inoremap <c-space> <c-x><c-o>
     autocmd Filetype javascript map <F8> :TagbarToggle<CR>
-    autocmd Filetype javascript let js2hint_read = 1
-    autocmd Filetype javascript let js2hint_save = 1
   aug end
 
   aug filetype_python

@@ -13,3 +13,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git@github.com:plasticboy/vim-markdown.git
+[submodule "bundle/jshint.vim"]
+	path = bundle/jshint.vim
+	url = git@github.com:wookiehangover/jshint.vim
