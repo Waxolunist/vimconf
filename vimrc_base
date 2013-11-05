@@ -181,6 +181,7 @@ set linebreak
 set nolist
 
 let g:ctrlp_map = ',t'
+nmap ,. ,t
 let g:ctrlp_cmd = 'CtrlP'
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 

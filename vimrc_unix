@@ -4,19 +4,6 @@ endif
 
 
 
-function! InitSyntax()
-	let parent = $HOME .'/.vim/' 
-	let syntaxdir = parent . 'syntax/' 
-	let syntaxfile = syntaxdir . 'css.vim'
-	let syntaxfileorig = syntaxdir . 'unix/css.vim'
-
-	if !filereadable(syntaxfile)
-  	call rename(syntaxfileorig, syntaxfile) 
-  endif
-	
-endfunction
-call InitSyntax()
-
 autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
 
 " Change directory to the current file

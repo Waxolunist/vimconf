@@ -55,6 +55,8 @@ Following Plugins am I delivering:
   Windows style IDE for VIM
 - [css3 : css3 syntax for vim 2.1](http://www.vim.org/scripts/script.php?script_id=3042)
   CSS syntax highlighting with support for CSS3
+- [Better CSS Syntax for Vim : Make CSS more readable](http://www.vim.org/scripts/script.php?script_id=3220)
+  Syntax highlights for full CSS2, most of HTML5 & CSS3 properties (include prefix like -moz-).
 - [moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
   A color scheme for GUI supposed to be highly readable
 - [haml 1.0](http://www.vim.org/scripts/script.php?script_id=1433)
@@ -202,6 +204,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 05/11/2013: Updated Better CSS Syntax with pathogen
 - 04/11/2013: Substituted CommandT with CtrlP, because the ruby extension made problems on Maverick
 - 04/11/2013: Updated bundles html5, css3
 - 02/05/2013: Updated bundles command-T, tagbar, mini-bufexpl
