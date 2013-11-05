@@ -1,7 +1,7 @@
 let os=substitute(system('uname'), '\n', '', '')
 if has("gui_win32")       " NT Windows
 	source $HOME/vimfiles/gvimrc_win32
-elseif has("gui_mac") || os == 'Darwin'
+elseif has("gui_mac") || has("gui_macvim") || os == 'Darwin'
 	source $HOME/.vim/gvimrc_mac
 else
 	source $HOME/.vim/gvimrc_unix

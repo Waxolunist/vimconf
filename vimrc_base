@@ -150,7 +150,7 @@ if has("autocmd")
   " Set the cursorline in csv files
   aug CSV_Editing
     au!
-    au BufRead,BufWritePost *.csv :%ArrangeColumn
+    au BufReadPost,BufWritePost *.csv :1,$ArrangeColumn!
     au BufWritePre *.csv :%UnArrangeColumn
     au VimEnter,WinEnter,BufWinEnter *.csv setlocal cursorline
     au WinLeave *.csv setlocal nocursorline

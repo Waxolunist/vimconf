@@ -83,7 +83,7 @@ Following Plugins am I delivering:
   git wrapper
 - [ConqueTerm 2.2](http://www.vim.org/scripts/script.php?script_id=2771)
   Run interactive commands inside a Vim buffer 
-- [CSV 0.28](http://www.vim.org/scripts/script.php?script_id=2830)
+- [CSV 0.29](http://www.vim.org/scripts/script.php?script_id=2830)
   A Filetype plugin for csv files. 
 - [jedi-vim](https://github.com/davidhalter/jedi-vim)
   Using the python jedi autocompletion library for VIM.
@@ -204,6 +204,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 05/11/2013: Updated CSV with version 0.29
 - 05/11/2013: Updated Better CSS Syntax with pathogen
 - 04/11/2013: Substituted CommandT with CtrlP, because the ruby extension made problems on Maverick
 - 04/11/2013: Updated bundles html5, css3

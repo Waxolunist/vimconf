@@ -3,20 +3,6 @@ set visualbell
 
 set clipboard=unnamed
 
-function! InitSyntax()
-	let parent = $HOME .'/.vim/' 
-	let syntaxdir = parent . 'syntax/' 
-	let syntaxfile = syntaxdir . 'css.vim'
-	let syntaxfileorig = syntaxdir . 'mac/css.vim'
-
-	if !filereadable(syntaxfile)
-  	call rename(syntaxfileorig, syntaxfile) 
-  endif
-	
-endfunction
-
-call InitSyntax()
-
 function! MaximizeWindow()
   set lines=999
   set columns=999

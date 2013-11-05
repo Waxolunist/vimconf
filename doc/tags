@@ -49,6 +49,7 @@ $HOME\vimfiles	my.txt	/*$HOME\\vimfiles*
 :TlistUndebug	taglist.txt	/*:TlistUndebug*
 :TlistUnlock	taglist.txt	/*:TlistUnlock*
 :TlistUpdate	taglist.txt	/*:TlistUpdate*
+AddColumn_CSV	ft-csv.txt	/*AddColumn_CSV*
 Analyze_CSV	ft-csv.txt	/*Analyze_CSV*
 ArrangeColumn_CSV	ft-csv.txt	/*ArrangeColumn_CSV*
 CSV-Funtions	ft-csv.txt	/*CSV-Funtions*
@@ -107,6 +108,7 @@ ResetSnippets()	snipMate.txt	/*ResetSnippets()*
 SearchInColumn_CSV	ft-csv.txt	/*SearchInColumn_CSV*
 SetJavaClasspath()	my.txt	/*SetJavaClasspath()*
 Sort_CSV	ft-csv.txt	/*Sort_CSV*
+Substitute_CSV	ft-csv.txt	/*Substitute_CSV*
 SumCol_CSV	ft-csv.txt	/*SumCol_CSV*
 Table	ft-csv.txt	/*Table*
 Tlist_Get_Tag_Prototype_By_Line()	taglist.txt	/*Tlist_Get_Tag_Prototype_By_Line()*
@@ -187,7 +189,6 @@ csv-mbyte	ft-csv.txt	/*csv-mbyte*
 csv-move-folds	ft-csv.txt	/*csv-move-folds*
 csv-newline	ft-csv.txt	/*csv-newline*
 csv-nrformat	ft-csv.txt	/*csv-nrformat*
-csv-replace-col	ft-csv.txt	/*csv-replace-col*
 csv-slow	ft-csv.txt	/*csv-slow*
 csv-stl	ft-csv.txt	/*csv-stl*
 csv-strict	ft-csv.txt	/*csv-strict*
