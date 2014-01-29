@@ -31,3 +31,6 @@
 [submodule "bundle/Better-CSS-Syntax-for-Vim"]
 	path = bundle/Better-CSS-Syntax-for-Vim
 	url = git@github.com:ChrisYip/Better-CSS-Syntax-for-Vim.git
+[submodule "/Users/cst/.vim/bundle/vim-airline"]
+	path = /Users/cst/.vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
