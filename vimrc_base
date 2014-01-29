@@ -181,6 +181,10 @@ set nolist
 let g:ctrlp_map = ',t'
 nmap ,. ,t
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'cra'
+nnoremap ,c :let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
+
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
