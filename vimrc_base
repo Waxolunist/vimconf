@@ -158,8 +158,9 @@ endif
 noremap <silent> <F8> :TlistToggle<CR>
 let Tlist_Use_Right_Window = 1
 
-set statusline=%<%f%<%{FileTime()}%<%h%m%r%<%{fugitive#statusline()}%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
-set rulerformat=%15(%c%V\ %p%%%)
+" Use vim-airline instead
+" set statusline=%<%f%<%{FileTime()}%<%h%m%r%<%{fugitive#statusline()}%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
+" set rulerformat=%15(%c%V\ %p%%%)
 
 " OPTIONAL: This enables automatic indentation as you type.
 filetype indent on
@@ -185,6 +186,7 @@ let g:ctrlp_working_path_mode = 'cra'
 nnoremap ,c :let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
 
+" let g:airline#extensions#tabline#enabled = 1
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
