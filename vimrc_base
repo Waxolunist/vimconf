@@ -105,11 +105,10 @@ let voom_tree_placement = 'right'
 let moria_style = 'dark'
 colors moria
 
-let g:defaultExplorer=0
-let g:persistentBehaviour=0
-map <c-w><c-t> :WMToggle<cr> 
-map <c-w><c-f> :FirstExplorerWindow<cr>
-map <c-w><c-b> :BottomExplorerWindow<cr>
+" Use Nerdtree instead of winmanager
+" map <c-w><c-t> :WMToggle<cr> 
+" map <c-w><c-f> :FirstExplorerWindow<cr>
+" map <c-w><c-b> :BottomExplorerWindow<cr>
 
 vmap <silent> <Right> l
 vmap <silent> <Left> h
@@ -199,6 +198,12 @@ let g:csv_autocmd_arrange = 1
 nnoremap H :set cursorline! cursorcolumn!<CR>
 
 command! -nargs=* Wrap set wrap linebreak nolist
+
+" nerdtree
+let g:persistentBehaviour=0
+let g:defaultExplorer=0
+map <C-n> :NERDTreeToggle<CR>
+autocmd vimenter * if !argc() | NERDTree | endif
 
 call InitBackupDir()
 execute pathogen#infect()

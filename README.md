@@ -49,10 +49,6 @@ Following Plugins am I delivering:
   Syntax highlight for Markdown text files
 - [snipMate 0.8.3](http://www.vim.org/scripts/script.php?script_id=2540)
   TextMate-style snippets support
-- [bufexplorer 7.3.5](http://www.vim.org/scripts/script.php?script_id=42)
-  Buffer Explorer / Browser - Switch between buffers easily
-- [winmanger 2.41](http://www.vim.org/scripts/script.php?script_id=1440)
-  Windows style IDE for VIM
 - [css3 : css3 syntax for vim 2.1](http://www.vim.org/scripts/script.php?script_id=3042)
   CSS syntax highlighting with support for CSS3
 - [Better CSS Syntax for Vim : Make CSS more readable](http://www.vim.org/scripts/script.php?script_id=3220)
@@ -105,6 +101,8 @@ Following Plugins am I delivering:
   JavaScript bundle for vim, this bundle provides syntax and indent plugins.
 - [Tagbar](https://github.com/majutsushi/tagbar)
   Vim plugin that displays tags in a window, ordered by class etc. 
+- [Nerdtree](https://github.com/scrooloose/nerdtree)
+  A tree explorer plugin for vim. 
 
 ## Changes made to the plugins
 
@@ -154,12 +152,8 @@ Opens the hierarchy view on the right side.
 
 # Shortcuts
 	
-- *Ctrl-w Ctrl-t*
-Enables the WindowManager
-- *Ctrl-w Ctrl-f*
-Switches to the file chooser of the WindowManager
-- *Ctrl-w Ctrl-b*
-Switches to the buffer explorer of the WindowManager
+- *Ctrl-n*
+Enables the Nerdtree
 - *Ctrl-Space*
 Completion in java code (Hold the ctrl-key down to choose from completion)
 - *<F8>*
@@ -204,6 +198,7 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+- 05/03/2014: Installed nerdtree, removed winmanager and bufexplorer
 - 05/11/2013: Updated CSV with version 0.29
 - 05/11/2013: Updated Better CSS Syntax with pathogen
 - 04/11/2013: Substituted CommandT with CtrlP, because the ruby extension made problems on Maverick
