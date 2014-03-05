@@ -198,7 +198,9 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
-- 05/03/2014: Installed nerdtree, removed winmanager and bufexplorer
+
+- 05/03/2014: Updated html5.vim, jshint, tagbar, airline, vim-markdown
+- 05/03/2014: Installed nerdtree, airline; removed winmanager and bufexplorer
 - 05/11/2013: Updated CSV with version 0.29
 - 05/11/2013: Updated Better CSS Syntax with pathogen
 - 04/11/2013: Substituted CommandT with CtrlP, because the ruby extension made problems on Maverick

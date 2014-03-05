@@ -268,6 +268,7 @@ VERSION																				*my-version* *personal-version*
 Currently I am using version 7.3 of vim.
 All plugins were updated on 01/13/2012.
 
+- 05/03/2014: Updated html5.vim, jshint, tagbar, airline, vim-markdown
 - 05/03/2014: Installed nerdtree, removed winmanager and bufexplorer
 - 10/04/2013: Updated fugitive to the latest master version
 - 20/03/2013: Remaped on windows <C-a> and <C-x> to <A-a> and <A-x>
