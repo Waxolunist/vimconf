@@ -121,14 +121,15 @@ nmap <silent> <Down> gj
 imap <silent> <Up> <C-o>gk
 imap <silent> <Down> <C-o>gj
 
-:command Bash call conque_term#open('bash')
-
+if !exists(':Bash')
+  command! -bang Bash call conque_term#open('bash')
+endif
 
 if has("autocmd")
   aug filetype_java
     au!
-	  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-  	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
+    autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+    autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
     autocmd Filetype java inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
     autocmd Filetype java inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
     autocmd Filetype java inoremap <c-space> <c-x><c-o>
@@ -151,7 +152,8 @@ if has("autocmd")
     au!
     au VimEnter,WinEnter,BufWinEnter *.csv setlocal cursorline
     au WinLeave *.csv setlocal nocursorline
-  aug end
+ aug end
+ let g:csv_autocmd_arrange = 1
 endif
 
 noremap <silent> <F8> :TlistToggle<CR>
@@ -177,12 +179,13 @@ set nu
 set wrap
 set linebreak
 set nolist
+set hlsearch
 
 let g:ctrlp_map = ',t'
 nmap ,. ,t
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'cra'
-nnoremap ,c :let g:ctrlp_working_path_mode = 'c'
+nnoremap ,c :let g:ctrlp_working_path_mode = 'c'<CR>
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
 
 " let g:airline#extensions#tabline#enabled = 1
@@ -190,8 +193,7 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
-
-let g:csv_autocmd_arrange = 1
+map <C-m> :MBEOpen<CR>:MBEFocus<CR>
 
 :hi CursorLine term=bold cterm=bold guibg=Grey40
 :hi CtrlPLinePre term=bold cterm=bold guibg=Grey30  
@@ -202,8 +204,11 @@ command! -nargs=* Wrap set wrap linebreak nolist
 " nerdtree
 let g:persistentBehaviour=0
 let g:defaultExplorer=0
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeCWD<CR>:NERDTreeFocus<CR>
 autocmd vimenter * if !argc() | NERDTree | endif
+
+" Go Fullscreen
+map <C-F11> :MBEToggle<CR>:NERDTreeToggle<CR>
 
 call InitBackupDir()
 execute pathogen#infect()
