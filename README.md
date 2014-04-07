@@ -36,11 +36,10 @@ If you are using omnicompletion for vim you need also python installed with jedi
 
 To use the taglist plugin you need to install the exuberant ctags library.
 
-To use the command-t plugin you need to compile the extra libraries:
+To use the plugins installed as git submodules you have to initialize them:
 
-    $ cd ~/.vim/bundle/command-T/ruby/command-t 
-    $ ruby extconf.rb 
-    $ make
+    $ git submodule init
+    $ git submodule update
 
 # Plugins
 
@@ -50,12 +49,10 @@ Following Plugins am I delivering:
   Syntax highlight for Markdown text files
 - [snipMate 0.8.3](http://www.vim.org/scripts/script.php?script_id=2540)
   TextMate-style snippets support
-- [bufexplorer 7.3.5](http://www.vim.org/scripts/script.php?script_id=42)
-  Buffer Explorer / Browser - Switch between buffers easily
-- [winmanger 2.41](http://www.vim.org/scripts/script.php?script_id=1440)
-  Windows style IDE for VIM
 - [css3 : css3 syntax for vim 2.1](http://www.vim.org/scripts/script.php?script_id=3042)
   CSS syntax highlighting with support for CSS3
+- [Better CSS Syntax for Vim : Make CSS more readable](http://www.vim.org/scripts/script.php?script_id=3220)
+  Syntax highlights for full CSS2, most of HTML5 & CSS3 properties (include prefix like -moz-).
 - [moria 2.6.4](http://www.vim.org/scripts/script.php?script_id=1464)
   A color scheme for GUI supposed to be highly readable
 - [haml 1.0](http://www.vim.org/scripts/script.php?script_id=1433)
@@ -82,7 +79,7 @@ Following Plugins am I delivering:
   git wrapper
 - [ConqueTerm 2.2](http://www.vim.org/scripts/script.php?script_id=2771)
   Run interactive commands inside a Vim buffer 
-- [CSV 0.28](http://www.vim.org/scripts/script.php?script_id=2830)
+- [CSV 0.29](http://www.vim.org/scripts/script.php?script_id=2830)
   A Filetype plugin for csv files. 
 - [jedi-vim](https://github.com/davidhalter/jedi-vim)
   Using the python jedi autocompletion library for VIM.
@@ -92,7 +89,7 @@ Following Plugins am I delivering:
   An alternative indentation script for python
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
   Jade syntax highlighting
-- [Command-T](https://github.com/wincent/Command-T)
+- [CtrlP](https://github.com/kien/ctrlp.vim)
   Fast, intuitive mechanism for opening files 
 - [Minibufexplorer](https://github.com/fholgado/minibufexpl.vim)
   Elegant buffer explorer - takes very little screen space 
@@ -104,6 +101,8 @@ Following Plugins am I delivering:
   JavaScript bundle for vim, this bundle provides syntax and indent plugins.
 - [Tagbar](https://github.com/majutsushi/tagbar)
   Vim plugin that displays tags in a window, ordered by class etc. 
+- [Nerdtree](https://github.com/scrooloose/nerdtree)
+  A tree explorer plugin for vim. 
 
 ## Changes made to the plugins
 
@@ -153,12 +152,8 @@ Opens the hierarchy view on the right side.
 
 # Shortcuts
 	
-- *Ctrl-w Ctrl-t*
-Enables the WindowManager
-- *Ctrl-w Ctrl-f*
-Switches to the file chooser of the WindowManager
-- *Ctrl-w Ctrl-b*
-Switches to the buffer explorer of the WindowManager
+- *Ctrl-n*
+Enables the Nerdtree
 - *Ctrl-Space*
 Completion in java code (Hold the ctrl-key down to choose from completion)
 - *<F8>*
@@ -169,6 +164,8 @@ Pressing "S" in the the FileManager opens the current file in the correct app.
 Opens the url under the cursor (see utl.vim)
 - *,l*
 Search for the dictionary entry at http://dict.leo.org
+- *,t*
+Search for files using CtrlP
 
 # Documentation
 
@@ -201,6 +198,13 @@ Currently I am using version 7.3 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
+
+- 05/03/2014: Updated html5.vim, jshint, tagbar, airline, vim-markdown
+- 05/03/2014: Installed nerdtree, airline; removed winmanager and bufexplorer
+- 05/11/2013: Updated CSV with version 0.29
+- 05/11/2013: Updated Better CSS Syntax with pathogen
+- 04/11/2013: Substituted CommandT with CtrlP, because the ruby extension made problems on Maverick
+- 04/11/2013: Updated bundles html5, css3
 - 02/05/2013: Updated bundles command-T, tagbar, mini-bufexpl
 - 02/05/2013: Replaced markdown vim plugin with https://github.com/plasticboy/vim-markdown/
 - 13/04/2013: Installed jshint, tagbar

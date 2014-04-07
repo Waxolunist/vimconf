@@ -105,11 +105,10 @@ let voom_tree_placement = 'right'
 let moria_style = 'dark'
 colors moria
 
-let g:defaultExplorer=0
-let g:persistentBehaviour=0
-map <c-w><c-t> :WMToggle<cr> 
-map <c-w><c-f> :FirstExplorerWindow<cr>
-map <c-w><c-b> :BottomExplorerWindow<cr>
+" Use Nerdtree instead of winmanager
+" map <c-w><c-t> :WMToggle<cr> 
+" map <c-w><c-f> :FirstExplorerWindow<cr>
+" map <c-w><c-b> :BottomExplorerWindow<cr>
 
 vmap <silent> <Right> l
 vmap <silent> <Left> h
@@ -122,14 +121,15 @@ nmap <silent> <Down> gj
 imap <silent> <Up> <C-o>gk
 imap <silent> <Down> <C-o>gj
 
-:command Bash call conque_term#open('bash')
-
+if !exists(':Bash')
+  command! -bang Bash call conque_term#open('bash')
+endif
 
 if has("autocmd")
   aug filetype_java
     au!
-	  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-  	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
+    autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+    autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo 
     autocmd Filetype java inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
     autocmd Filetype java inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
     autocmd Filetype java inoremap <c-space> <c-x><c-o>
@@ -150,18 +150,18 @@ if has("autocmd")
   " Set the cursorline in csv files
   aug CSV_Editing
     au!
-    au BufRead,BufWritePost *.csv :%ArrangeColumn
-    au BufWritePre *.csv :%UnArrangeColumn
     au VimEnter,WinEnter,BufWinEnter *.csv setlocal cursorline
     au WinLeave *.csv setlocal nocursorline
-  aug end
+ aug end
+ let g:csv_autocmd_arrange = 1
 endif
 
 noremap <silent> <F8> :TlistToggle<CR>
 let Tlist_Use_Right_Window = 1
 
-set statusline=%<%f%<%{FileTime()}%<%h%m%r%<%{fugitive#statusline()}%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
-set rulerformat=%15(%c%V\ %p%%%)
+" Use vim-airline instead
+" set statusline=%<%f%<%{FileTime()}%<%h%m%r%<%{fugitive#statusline()}%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}
+" set rulerformat=%15(%c%V\ %p%%%)
 
 " OPTIONAL: This enables automatic indentation as you type.
 filetype indent on
@@ -179,14 +179,36 @@ set nu
 set wrap
 set linebreak
 set nolist
+set hlsearch
 
-nnoremap <silent> ,t :CommandT<CR>
+let g:ctrlp_map = ',t'
+nmap ,. ,t
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'cra'
+nnoremap ,c :let g:ctrlp_working_path_mode = 'c'<CR>
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
+
+" let g:airline#extensions#tabline#enabled = 1
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
+map <C-m> :MBEOpen<CR>:MBEFocus<CR>
+
+:hi CursorLine term=bold cterm=bold guibg=Grey40
+:hi CtrlPLinePre term=bold cterm=bold guibg=Grey30  
+nnoremap H :set cursorline! cursorcolumn!<CR>
 
 command! -nargs=* Wrap set wrap linebreak nolist
+
+" nerdtree
+let g:persistentBehaviour=0
+let g:defaultExplorer=0
+map <C-n> :NERDTreeCWD<CR>:NERDTreeFocus<CR>
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" Go Fullscreen
+map <C-F11> :MBEToggle<CR>:NERDTreeToggle<CR>
 
 call InitBackupDir()
 execute pathogen#infect()
