@@ -199,6 +199,7 @@ All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
 
+- 14/04/2014: Added solarized color scheme 
 - 05/03/2014: Updated html5.vim, jshint, tagbar, airline, vim-markdown
 - 05/03/2014: Installed nerdtree, airline; removed winmanager and bufexplorer
 - 05/11/2013: Updated CSV with version 0.29
