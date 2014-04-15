@@ -1,12 +1,12 @@
-if has("gui_running")
-   if has("gui_gtk2")
-   	set guifont=FreeMono\ Bold\ 12
-   elseif has("x11")
-   	set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
-   else
-  	set guifont=Courier_New:h11:cDEFAULT
-	endif
-endif 
+"if has("gui_running")
+"   if has("gui_gtk2")
+"   	set guifont=FreeMono\ Bold\ 12
+"   elseif has("x11")
+"   	set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
+"   else
+"  	set guifont=Courier_New:h11:cDEFAULT
+"	endif
+"endif 
 
 " Maximize Window running unix
 " See http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
@@ -17,5 +17,8 @@ endfunction
 
 set guioptions-=m
 set guioptions-=T
+
+map <C-Tab> :bn!<CR>
+map <C-S-Tab> :bp!<CR>
 
 autocmd GUIEnter * :call MaximizeWindow()
