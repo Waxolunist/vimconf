@@ -21,4 +21,5 @@ set guioptions-=T
 map <C-Tab> :bn!<CR>
 map <C-S-Tab> :bp!<CR>
 
-autocmd GUIEnter * :call MaximizeWindow()
+nnoremap <F5> :silent update<Bar>silent !sensible-browser %:p &<CR>
+" autocmd GUIEnter * :call MaximizeWindow()
