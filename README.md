@@ -73,7 +73,7 @@ Following Plugins am I delivering:
   Syntax highlighting for Asciidoc (Changed dark colors to light colors)
 - [utl 3.0a](http://www.vim.org/scripts/script.php?script_id=293)
   Univeral Text Linking - Execute URLs, footnotes, open emails, organize ideas
-- [pathogen](https://github.com/tpope/vim-pathogen)
+- [pathogen 2.3](https://github.com/tpope/vim-pathogen)
   manage your runtimepath
 - [fugitive](https://github.com/tpope/vim-fugitive)
   git wrapper
@@ -103,7 +103,9 @@ Following Plugins am I delivering:
   Vim plugin that displays tags in a window, ordered by class etc. 
 - [Nerdtree](https://github.com/scrooloose/nerdtree)
   A tree explorer plugin for vim. 
-
+- [Wikilink](https://github.com/mmai/wikilink)
+  Follow wiki links with Enter and Go Back with Shift+Enter
+  
 ## Changes made to the plugins
 
 Changes made to the plugins
@@ -199,6 +201,8 @@ All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
 
+- 19/06/2014: Updated Pathogen to 2.3
+- 19/06/2014: Installed wikilink plugin https://github.com/mmai/wikilink
 - 14/04/2014: Added solarized color scheme 
 - 05/03/2014: Updated html5.vim, jshint, tagbar, airline, vim-markdown
 - 05/03/2014: Installed nerdtree, airline; removed winmanager and bufexplorer

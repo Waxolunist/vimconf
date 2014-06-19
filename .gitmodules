@@ -40,3 +40,6 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "bundle/wikilink"]
+	path = bundle/wikilink
+	url = git@github.com:mmai/wikilink.git
