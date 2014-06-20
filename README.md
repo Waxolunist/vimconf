@@ -201,6 +201,14 @@ All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
 
+- 19/06/2014: Updated plugins 
+    * html5.vim
+    * jshint.vim
+    * tagbar
+    * vim-airline
+    * vim-fugitive
+    * vim-javascript
+    * vim-markdown
 - 19/06/2014: Updated Pathogen to 2.3
 - 19/06/2014: Installed wikilink plugin https://github.com/mmai/wikilink
 - 14/04/2014: Added solarized color scheme 

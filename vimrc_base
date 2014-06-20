@@ -200,7 +200,6 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
-map <C-m> :MBEOpen<CR>:MBEFocus<CR>
 map <C-Right> :bn!<CR>
 map <C-Left> :bp!<CR>
 
