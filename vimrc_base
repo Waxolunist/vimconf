@@ -30,7 +30,8 @@ function! InitBackupDir()
     let missing_dir = 1 
   endif 
   if isdirectory(backup) 
-    execute 'set directory=' . escape(tmp, " ") . "/,." 
+    "execute 'set directory=' . escape(tmp, " ") . "/,." 
+    execute 'set directory=~/tmp,$TMP'
   else 
     let missing_dir = 1 
   endif 
