@@ -203,6 +203,7 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1 
 map <C-Right> :bn!<CR>
 map <C-Left> :bp!<CR>
+nnoremap <C-m> :MBEOpen<CR>:MBEFocus<CR>
 
 nnoremap H :set cursorline! cursorcolumn!<CR>
 
@@ -216,5 +217,10 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 " Go Fullscreen
 map <C-F11> :MBEToggle<CR>:NERDTreeToggle<CR>
+
+nmap gu :Utl<cr>
+let g:utl_opt_highlight_urls='yes'
+let g:utl_opt_verbose=0		    " 0=no (default), 1=yes
+nmap ,l :exe ":Utl ol http://dict.leo.org/?search=" . expand("<cword>")
 
 call InitBackupDir()
