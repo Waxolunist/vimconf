@@ -3,12 +3,5 @@ set visualbell
 
 set clipboard=unnamed
 
-function! MaximizeWindow()
-  set lines=999
-  set columns=999
-endfunction
-
 set guioptions-=m
 set guioptions-=T
-
-autocmd GUIEnter * :call MaximizeWindow()
