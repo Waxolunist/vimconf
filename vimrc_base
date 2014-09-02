@@ -222,10 +222,7 @@ let g:utl_opt_highlight_urls='yes'
 let g:utl_opt_verbose=0		    " 0=no (default), 1=yes
 nmap ,l :exe ":Utl ol http://dict.leo.org/?search=" . expand("<cword>")
 
-let g:vim_json_syntax_conceal = 0
-
-" syntastic
-let g:syntastic_javascript_checker = "jshint"
-let g:jshint_highlight_color = "Red"
+"Syntastic
+let g:syntastic_check_on_open = 1
 
 call InitBackupDir()
