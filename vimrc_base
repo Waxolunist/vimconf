@@ -224,4 +224,8 @@ nmap ,l :exe ":Utl ol http://dict.leo.org/?search=" . expand("<cword>")
 
 let g:vim_json_syntax_conceal = 0
 
+" syntastic
+let g:syntastic_javascript_checker = "jshint"
+let g:jshint_highlight_color = "Red"
+
 call InitBackupDir()
