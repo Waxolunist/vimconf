@@ -95,8 +95,8 @@ Following Plugins am I delivering:
   Elegant buffer explorer - takes very little screen space 
 - [JSLint](https://github.com/hallettj/jslint.vim)
   VIM plugin and command line tool for running JSLint 
-- [JSHint](https://github.com/walm/jshint.vim)
-  A plugin that integrates JSHint with Vim
+- [Syntastic](https://github.com/scrooloose/syntastic)
+  A syntax checking plugin for Vim that runs files through external syntax checkers and displays any resulting errors to the user.
 - [Javascript](https://github.com/pangloss/vim-javascript)
   JavaScript bundle for vim, this bundle provides syntax and indent plugins.
 - [Tagbar](https://github.com/majutsushi/tagbar)
@@ -201,6 +201,7 @@ All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
 
+- 02/09/2014: Removed jshint in favor of syntastic
 - 19/06/2014: Updated plugins 
     * html5.vim
     * jshint.vim
