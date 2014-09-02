@@ -1,7 +1,5 @@
 set guifont=Courier_New:h11:cDEFAULT
 set visualbell
 
-set clipboard=unnamed
-
 set guioptions-=m
 set guioptions-=T

@@ -1,2 +1,4 @@
 map <C-Tab> :bn!<CR>
 map <C-S-Tab> :bp!<CR>
+
+set clipboard=unnamed
