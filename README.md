@@ -105,6 +105,8 @@ Following Plugins am I delivering:
   A tree explorer plugin for vim. 
 - [Wikilink](https://github.com/mmai/wikilink)
   Follow wiki links with Enter and Go Back with Shift+Enter
+- [Colorizer](https://github.com/lilydjwg/colorizer)
+  A Vim plugin to colorize all text in the form #rrggbb or #rgb. 
   
 ## Changes made to the plugins
 
@@ -201,6 +203,7 @@ All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
 
+- 11/09/2014: Added colorizer plugin
 - 02/09/2014: Removed jshint in favor of syntastic
 - 19/06/2014: Updated plugins 
     * html5.vim
