@@ -161,6 +161,16 @@ if has("autocmd")
     au VimEnter,WinEnter,BufWinEnter *.csv setlocal cursorline
     au WinLeave *.csv setlocal nocursorline
  aug end
+
+ aug filetype_html
+   au! 
+   autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags 
+   autocmd FileType html setlocal completefunc=htmlcomplete#CompleteTags 
+   autocmd Filetype html inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
+   autocmd Filetype html inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
+   autocmd Filetype html inoremap <c-space> <c-x><c-o>
+ aug end
+
  let g:csv_autocmd_arrange = 1
 endif
 
