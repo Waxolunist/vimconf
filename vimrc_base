@@ -147,6 +147,7 @@ if has("autocmd")
   aug filetype_javascript
     autocmd Filetype javascript inoremap <c-space> <c-x><c-o>
     autocmd Filetype javascript map <F8> :TagbarToggle<CR>
+    autocmd Filetype javascript let g:syntastic_check_on_open = 1
   aug end
 
   aug filetype_python
@@ -169,6 +170,7 @@ if has("autocmd")
    autocmd Filetype html inoremap <buffer> <c-x><c-u> <c-x><c-u><c-p>
    autocmd Filetype html inoremap <buffer> <c-s-space> <c-x><c-u><c-p> 
    autocmd Filetype html inoremap <c-space> <c-x><c-o>
+   autocmd Filetype javascript let g:syntastic_check_on_open = 1
  aug end
 
  let g:csv_autocmd_arrange = 1
@@ -231,8 +233,5 @@ nmap gu :Utl<cr>
 let g:utl_opt_highlight_urls='yes'
 let g:utl_opt_verbose=0		    " 0=no (default), 1=yes
 nmap ,l :exe ":Utl ol http://dict.leo.org/?search=" . expand("<cword>")
-
-"Syntastic
-let g:syntastic_check_on_open = 1
 
 call InitBackupDir()
