@@ -34,7 +34,7 @@ If you are using omnicompletion for vim you need also python installed with jedi
 
     $ pip install jedi
 
-To use the taglist plugin you need to install the exuberant ctags library.
+To use the tagbar plugin you need to install the exuberant ctags library.
 
 To use the plugins installed as git submodules you have to initialize them:
 
@@ -83,8 +83,6 @@ Following Plugins am I delivering:
   A Filetype plugin for csv files. 
 - [jedi-vim](https://github.com/davidhalter/jedi-vim)
   Using the python jedi autocompletion library for VIM.
-- [taglist 4.5](http://www.vim.org/scripts/script.php?script_id=273)
-  Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
 - [indent/python](https://github.com/hynek/vim-python-pep8-indent)
   An alternative indentation script for python
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
@@ -198,11 +196,12 @@ Often I forget some shortcuts. I write them all down in *doc/my.txt* and open th
 
 # Versions
 
-Currently I am using version 7.3 of vim.
+Currently I am using version 7.4 of vim.
 All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
 
+- 15/04/2015: Deleted taglist plugin and using tagbar only
 - 11/09/2014: Added colorizer plugin
 - 02/09/2014: Removed jshint in favor of syntastic
 - 19/06/2014: Updated plugins 
