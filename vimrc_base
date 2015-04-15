@@ -176,6 +176,9 @@ if has("autocmd")
 endif
 
 noremap <silent> <F8> :TagbarToggle<CR>
+noremap <silent> <C-T> :TagbarToggle j<CR>
+let g:tagbar_autoshowtag = 1
+
 
 " Use vim-airline instead
 " set statusline=%<%f%<%{FileTime()}%<%h%m%r%<%{fugitive#statusline()}%=%-10.(%l/%L,%c%V,BfNm=%n%Y%)%=%-10.(%)\%P\*%=%{CurTime()}

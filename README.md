@@ -201,6 +201,16 @@ All plugins were updated on 18/02/2013.
 
 Last updates to this document: 
 
+- 15/04/2015: Updated plugins
+    * html5.vim
+    * nerdtree
+    * syntastic
+    * tagbar
+    * vim-airline
+    * vim-fugitive
+    * vim-json
+    * vim-markdown
+    * vim-polyglot
 - 15/04/2015: Deleted taglist plugin and using tagbar only
 - 11/09/2014: Added colorizer plugin
 - 02/09/2014: Removed jshint in favor of syntastic
